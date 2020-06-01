@@ -13,11 +13,13 @@
                             {{ session('status') }}
                         </div>
                     @endif
-               
+                        Dash Page
                     You are logged in!
                 </div>
+            <div id="client">client for dash copn</div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection
