@@ -14,5 +14,8 @@ require("./bootstrap");
 
 require("./components/Example");
 require("./components/client");
-
+//shops
 require("./components/shop/shopDetail");
+require("./components/shopui");
+//menu
+require("./components/menu/menuForm");

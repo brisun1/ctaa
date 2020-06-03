@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 //Route::get('shopShow','Api\ShopController@show');
 Route::ApiResource('shop','Api\ShopController');
+//->middleware('auth:api')

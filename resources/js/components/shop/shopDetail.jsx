@@ -4,15 +4,21 @@ class ShopDetail extends Component {
     constructor() {
         super();
         this.state = {
-            shop: ""
+            shop: []
         };
     }
+
+    // componentDidMount() {
+    //     axios.get("/oauth/personal-access-tokens").then(response => {
+    //         console.log(response.data);
+    //     });
+    // }
     componentDidMount() {
-        axios.get("api/shop").then(res => {
-            let sData = res.data;
+        axios.get("api/shop/show").then(res => {
+            //let sData = res.data;
 
             this.setState({
-                shop: sData.data
+                shop: res.data
             });
             console.log("whyres" + this.state.shop);
         });
@@ -22,17 +28,16 @@ class ShopDetail extends Component {
         console.log(this.state);
         return (
             <div>
-                {/* this.state.shop.map(shop => { */}
-
-                <div>
-                    <div>wrong</div>
-                    <div>{this.state.shop.addr}</div>
-                    <div value={this.state.shop.phone}>
-                        {this.state.shop.phone}
-                    </div>
-                </div>
-
-                {/* }) */}
+                <div>test</div>
+                {this.state.shop.map(shop => {
+                    return (
+                        <div>
+                            <div>wrong</div>
+                            <div>{shop.addr}</div>
+                            <div value={shop.phone}>{shop.phone}</div>
+                        </div>
+                    );
+                })}
             </div>
         );
     }

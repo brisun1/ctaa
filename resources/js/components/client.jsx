@@ -6,7 +6,7 @@ import {
     NavLink
 } from "react-router-dom";
 import ReactDOM from "react-dom";
-import ShopDetail from "../components/shop/shopDetail";
+import Shopui from "../components/shopui";
 
 function ClientApp() {
     return (
@@ -34,7 +34,7 @@ function ClientApp() {
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Switch>
-                    <Route path="/shopShow" component={ShopDetail}>
+                    <Route path="/shopShow" component={Shopui}>
                         {/* <ShopDetail /> */}
                     </Route>
                     <Route path="/order">

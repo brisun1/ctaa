@@ -20,10 +20,10 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
+        // $user = Auth::user();
         
 
-        return new ShopResource(Shop::find(1));
+        // return new ShopResource(Shop::find(1));
         // $data=Shop::all();
         //  return response()->json($data);
         //return view('client.forms');
@@ -167,10 +167,18 @@ class ShopController extends Controller
      */
     public function show()
     {
+        //$user_id=Auth::id();
+        $shops = User::find(1)->shops;
+        $i=0;
+        foreach ($shops as $shop) {
+            $data[$i]=new ShopResource($shop);
+            $i++;
+}
         //return new ShopResource(Shop::find(1));
        // $data=Shop::all();
-       $data=Shop::find(1);
-         return response()->json($data);
+    //   $data=Shop::find(1);
+    //       return response()->json($data);
+    return $data;
     }
 
     /**
