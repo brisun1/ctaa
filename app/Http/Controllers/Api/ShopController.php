@@ -152,10 +152,7 @@ class ShopController extends Controller
         $shop->save();
         //create a menu tbl
         $newTbl=new CreateTbl;
-        $newTbl->create_memu_tbl($shop_id);
-        
-        
-       
+        $newTbl->create_memu_tbl();
         return view('client.forms');
     }
 

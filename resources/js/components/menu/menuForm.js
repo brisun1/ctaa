@@ -2,38 +2,36 @@ import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
 //it is menu.js in cta
 class MenuForm extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            cats: ["", ""],
-            inputs: [1, 2, 3, 4, 5],
-            inpVal: {
-                fid: {
-                    id: null,
-                    val: ["", "", "", "", ""],
-                    catNum: [0, 0, 0, 1, 1]
-                },
+    state = {
+        cats: ["", ""],
+        inputs: [1, 2, 3, 4, 5],
+        inpVal: {
+            fid: {
+                id: null,
+                val: ["", "", "", "", ""],
+                catNum: [0, 0, 0, 1, 1]
+            },
 
-                // { id: null, inpVal: null },
-                fname: {
-                    id: null,
-                    val: ["", "", "", "", ""],
-                    catNum: [0, 0, 0, 1, 1]
-                },
-                price: {
-                    id: null,
-                    val: ["", "", "", "", ""],
-                    catNum: [0, 0, 0, 1, 1]
-                },
-                note: {
-                    id: null,
-                    val: ["", "", "", "", ""],
-                    catNum: [0, 0, 0, 1, 1]
-                },
-                cat: ["", ""]
-            }
-        };
-    }
+            // { id: null, inpVal: null },
+            fname: {
+                id: null,
+                val: ["", "", "", "", ""],
+                catNum: [0, 0, 0, 1, 1]
+            },
+            price: {
+                id: null,
+                val: ["", "", "", "", ""],
+                catNum: [0, 0, 0, 1, 1]
+            },
+            note: {
+                id: null,
+                val: ["", "", "", "", ""],
+                catNum: [0, 0, 0, 1, 1]
+            },
+            cat: ["", ""]
+        }
+    };
+
     addInputs = (e, ci) => {
         this.setState({ inputs: [...this.state.inputs, ci] });
         const inpVal = { ...this.state.inpVal };
@@ -263,6 +261,6 @@ class MenuForm extends React.Component {
 }
 
 export default MenuForm;
-if (document.getElementById("menu")) {
-    ReactDOM.render(<MenuForm />, document.getElementById("menu"));
-}
+// if (document.getElementById("menu")) {
+//     ReactDOM.render(<MenuForm />, document.getElementById("menu"));
+// }

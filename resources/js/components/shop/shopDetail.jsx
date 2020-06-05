@@ -15,12 +15,9 @@ class ShopDetail extends Component {
     // }
     componentDidMount() {
         axios.get("api/shop/show").then(res => {
-            //let sData = res.data;
-
             this.setState({
                 shop: res.data
             });
-            console.log("whyres" + this.state.shop);
         });
     }
     render() {

@@ -20,3 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //Route::get('shopShow','Api\ShopController@show');
 Route::ApiResource('shop','Api\ShopController');
 //->middleware('auth:api')
+Route::post('menu/store','Api\MenuController@store');
+Route::get('menu/show','Api\MenuController@show');
+Route::put('menu/update','Api\MenuController@update')->middleware('auth:api');
