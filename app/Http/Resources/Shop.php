@@ -16,7 +16,7 @@ class Shop extends JsonResource
     {
         //return parent::toArray($request);
         return [
-           
+            'id' => $this->id,
             'name' => $this->name,
             'addr' => $this->addr,
             'shop_id' => $this->shop_id,

@@ -3,38 +3,25 @@ import ReactDOM from "react-dom";
 class ShopDetail extends Component {
     constructor() {
         super();
-        this.state = {
-            shop: []
-        };
+        this.state = {};
     }
 
     // componentDidMount() {
-    //     axios.get("/oauth/personal-access-tokens").then(response => {
-    //         console.log(response.data);
+    //     axios.get("api/shop/show").then(res => {
+    //         this.setState({
+    //             shop: res.data
+    //         });
     //     });
     // }
-    componentDidMount() {
-        axios.get("api/shop/show").then(res => {
-            this.setState({
-                shop: res.data
-            });
-        });
-    }
     render() {
-        // let { shop } = this.state;
-        console.log(this.state);
+        let { shop } = this.props;
+        console.log(this.props);
         return (
-            <div>
-                <div>test</div>
-                {this.state.shop.map(shop => {
-                    return (
-                        <div>
-                            <div>wrong</div>
-                            <div>{shop.addr}</div>
-                            <div value={shop.phone}>{shop.phone}</div>
-                        </div>
-                    );
-                })}
+            <div key={"shop"} className="d-flex">
+                <div className="bg-light">{shop.name}</div>
+                <div>Address:{shop.addr}</div>
+                <div value={shop.phone}>Landline:{shop.phone}</div>
+                )}
             </div>
         );
     }

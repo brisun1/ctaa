@@ -11,11 +11,17 @@ require("./bootstrap");
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
+require("./components/App");
 require("./components/Example");
 require("./components/client");
 //shops
 require("./components/shop/shopDetail");
-require("./components/shopui");
+require("./components/shop/createShop");
+require("./components/clientShops");
+require("./components/shop/facia");
+require("./components/shop/shops");
 //menu
 require("./components/menu/menuForm");
+require("./components/menu/menuShow");
+require("./components/menu/clientMenu");
+require("./components/menu/callTest");

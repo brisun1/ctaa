@@ -18,8 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 //Route::get('shopShow','Api\ShopController@show');
-Route::ApiResource('shop','Api\ShopController');
+//Route::ApiResource('shop','Api\ShopController');
 //->middleware('auth:api')
+Route::get('shop/index','Api\ShopController@index');
+Route::get('shop/show','Api\ShopController@show')->middleware('auth:api');
+Route::post('shop/store','Api\ShopController@store')->middleware('auth:api');
 Route::post('menu/store','Api\MenuController@store');
-Route::get('menu/show','Api\MenuController@show');
+Route::get('menu/show/{str_tbl}','Api\MenuController@show');
 Route::put('menu/update','Api\MenuController@update')->middleware('auth:api');

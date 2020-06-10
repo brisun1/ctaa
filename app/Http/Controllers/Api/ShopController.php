@@ -10,7 +10,7 @@ use App\User;
 use App\CreateTbl;
 use Image;
 use Illuminate\Support\Facades\Auth;
-
+//use Auth;
 class ShopController extends Controller
 {
     /**
@@ -22,8 +22,8 @@ class ShopController extends Controller
     {
         // $user = Auth::user();
         
-
-        // return new ShopResource(Shop::find(1));
+        return ShopResource::collection(Shop::all());
+         //return new ShopResource(Shop::all());
         // $data=Shop::all();
         //  return response()->json($data);
         //return view('client.forms');
@@ -53,10 +53,13 @@ class ShopController extends Controller
     
     public function store(Request $request)
     {
-        $shop=new Shop();
+        $shop=new Shop;
+       
+        //$shop->user_id=Auth::id();auth('api')->user()
+        //return "auth uer id ".Auth::id()."tttttttt";
         $shopName=$request->get('shopName');
         $area=$request->get('area');
-
+        $shop->user_id=Auth::id();
         $shop->shop_id=$shopName.$area;
         $shop->name=$shopName;
         $shop->addr=$request->get('addr');
@@ -150,10 +153,14 @@ class ShopController extends Controller
         } 
         $shop->img3='no-user.jpg';    
         $shop->save();
+        
         //create a menu tbl
-        $newTbl=new CreateTbl;
-        $newTbl->create_memu_tbl();
-        return view('client.forms');
+        $newTbl=new CreateTbl();
+        $newTbl->create_menu_tbl();
+        $newTbl->create_menu_tbl();
+        return "success post";
+        //return view('client.forms');
+        
     }
 
     /**
@@ -164,18 +171,10 @@ class ShopController extends Controller
      */
     public function show()
     {
-        //$user_id=Auth::id();
-        $shops = User::find(1)->shops;
-        $i=0;
-        foreach ($shops as $shop) {
-            $data[$i]=new ShopResource($shop);
-            $i++;
-}
-        //return new ShopResource(Shop::find(1));
-       // $data=Shop::all();
-    //   $data=Shop::find(1);
-    //       return response()->json($data);
-    return $data;
+       
+        $shops=User::find(Auth::id())->shops;
+        return  ShopResource::collection($shops);
+      
     }
 
     /**

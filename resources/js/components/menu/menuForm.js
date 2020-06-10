@@ -1,37 +1,41 @@
 import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
+//import useParams from "react-router-dom";
 //it is menu.js in cta
 class MenuForm extends React.Component {
-    state = {
-        cats: ["", ""],
-        inputs: [1, 2, 3, 4, 5],
-        inpVal: {
-            fid: {
-                id: null,
-                val: ["", "", "", "", ""],
-                catNum: [0, 0, 0, 1, 1]
-            },
+    constructor(props) {
+        super(props);
 
-            // { id: null, inpVal: null },
-            fname: {
-                id: null,
-                val: ["", "", "", "", ""],
-                catNum: [0, 0, 0, 1, 1]
-            },
-            price: {
-                id: null,
-                val: ["", "", "", "", ""],
-                catNum: [0, 0, 0, 1, 1]
-            },
-            note: {
-                id: null,
-                val: ["", "", "", "", ""],
-                catNum: [0, 0, 0, 1, 1]
-            },
-            cat: ["", ""]
-        }
-    };
+        this.state = {
+            cats: ["", ""],
+            inputs: [1, 2, 3, 4, 5],
+            inpVal: {
+                fid: {
+                    id: null,
+                    val: ["", "", "", "", ""],
+                    catNum: [0, 0, 0, 1, 1]
+                },
 
+                // { id: null, inpVal: null },
+                fname: {
+                    id: null,
+                    val: ["", "", "", "", ""],
+                    catNum: [0, 0, 0, 1, 1]
+                },
+                price: {
+                    id: null,
+                    val: ["", "", "", "", ""],
+                    catNum: [0, 0, 0, 1, 1]
+                },
+                note: {
+                    id: null,
+                    val: ["", "", "", "", ""],
+                    catNum: [0, 0, 0, 1, 1]
+                },
+                cat: ["", ""]
+            }
+        };
+    }
     addInputs = (e, ci) => {
         this.setState({ inputs: [...this.state.inputs, ci] });
         const inpVal = { ...this.state.inpVal };
@@ -73,7 +77,8 @@ class MenuForm extends React.Component {
     };
     handleSubmit = event => {
         event.preventDefault();
-
+        //const tblName = this.props.computedParams.sref;
+        console.log("srefpppppp" + this.props);
         //setErrors(validate());
         //axios.post("api/clientForm", this.state).then(response => {});
 
@@ -92,20 +97,21 @@ class MenuForm extends React.Component {
         };
         //alert("sending data" + JSON.stringify(data));
         axios
-            .post("api/menu/store", data, {})
+            .post("api/menu/store/?tbl=", data, {})
             //.post("api/menu", JSON.stringify(data), {})
 
             // receive two parameter endpoint url ,form data
             //})
             .then(res => {
                 // then print response status
-                console.log("data isssssssss" + data);
-                console.log(res);
+                console.log("data isssssssss" + res);
+                //console.log(res);
                 //console.log(res.statusText);
             });
     };
 
     render() {
+        console.log("propspppp" + JSON.stringify(this.props));
         return (
             <form onSubmit={this.handleSubmit}>
                 <h5 className="text-center">Menu Register Form</h5>

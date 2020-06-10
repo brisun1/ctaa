@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Menu;
 use App\Http\Resources\MenuCollection;
+use Illuminate\Support\Facades\Schema;
 
 
 
@@ -16,6 +18,8 @@ class MenuController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
+      
     public function index()
     {
        $menu=Menu::all();
@@ -42,9 +46,13 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
+        // $menu=new Menu();
+        //      $menu->setTable("topshopclondalkin4_menu");
+        
         //validation goes here
        if($request->has('fname')){        
         $cat=$request->cat;
+        //return "here in contrller";
         $fid=$request->fid;
         $fname=$request->fname;
         $price=$request->price;
@@ -57,6 +65,7 @@ class MenuController extends Controller
            for($i=0;$i<sizeof($fname);$i++){
             if(isset($fname[$i])){
                 $menu=new Menu();
+                $menu->setTable("topshopclondalkin4_menu");
                 $index=$catNum[$i];
                 $menu->fid=$fid[$i];
                 $menu->fname=$fname[$i];
@@ -84,20 +93,26 @@ class MenuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($str_table)
     {
+        $menu=new Menu;
         
-        // $foods = User::find(1)->menu;
+        $tbl_name=$str_table.'_menu';
+        $menu->setTable($tbl_name);
+        if (!Schema::hasTable($tbl_name))
+        return;
+       //return response()->json($menu->get());
+    
+   
         
         //     $data=new MenuResource($food);
            
-        return new MenuCollection(Menu::all());
-        //return new MenuResource(Menu::all());
-       // $data=Shop::all();
+       return new MenuCollection($menu->get());
+       // return new MenuCollection($data);
+      
     //   $data=Shop::find(1);
     //       return response()->json($data);
     
-        //return view('menu')->with('menu',$menu);
     }
 
     /**

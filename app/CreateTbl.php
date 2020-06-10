@@ -6,18 +6,26 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Auth;
 use App\Shop;
+use App\User;
 
 class CreateTbl extends Model
 {
-    public function create_memu_tbl(){
-        $shops = App\Shop::find(1)->shops;
+    public function create_menu_tbl(){
+        
+        $shops=Auth::user()->shops;
+        //$shops = App\User::find(1)->shops;
+        //$shops =App\Shop::all();
+        //::find(1)->shops;
+        
+        
         foreach ($shops as $shop) {
             $sid=$shop->id;
             $sname=$shop->name;
             $sarea=$shop->area;
             $tbl_name=$sname.$sarea.$sid.'_menu';
-
+            
                 if (!Schema::hasTable($tbl_name)){
                     Schema::create($tbl_name, function($table)
                     {
@@ -26,10 +34,11 @@ class CreateTbl extends Model
                         $table->string('fname');
                         $table->unsignedDecimal('price', 5, 2);
                         $table->string('cat',20);
-                        $table->tinyInteger('note',120);
+                        $table->smallInteger('catNum');
+                        $table->string('note',120);
                         $table->timestamps();
                     });
                 }
-            }
         }
+    }
 }

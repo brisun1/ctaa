@@ -15,8 +15,7 @@ class CreateShopsTable extends Migration
     {
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('name',30);
             $table->string('shop_id');
             $table->string('addr',100);
@@ -35,7 +34,6 @@ class CreateShopsTable extends Migration
             $table->time('close_at',2);
             $table->boolean('is_completed');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

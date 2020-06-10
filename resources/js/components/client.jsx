@@ -6,9 +6,10 @@ import {
     NavLink
 } from "react-router-dom";
 import ReactDOM from "react-dom";
-import Shopui from "../components/shopui";
+import ClientShops from "../components/clientShops";
+import CreateShop from "../components/shop/createShop";
 import MenuForm from "../components/menu/menuForm";
-import GetMenu from "../components/menu/getMenu";
+import ClientMenu from "./menu/clientMenu";
 
 function ClientApp() {
     return (
@@ -36,17 +37,23 @@ function ClientApp() {
                         <li>
                             <NavLink to="/createMenu">create menu</NavLink>
                         </li>
+                        <li>
+                            <NavLink to="/createShop">create shop</NavLink>
+                        </li>
                     </ul>
                 </nav>
 
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Switch>
-                    <Route path="/createMenu" component={MenuForm}></Route>
-                    <Route path="/shopShow" component={Shopui}>
+                    <Route path="/createShop" component={CreateShop}></Route>
+                    <Route path="/createMenu">
+                        <MenuForm />
+                    </Route>
+                    <Route path="/shopShow" component={ClientShops}>
                         {/* <ShopDetail /> */}
                     </Route>
-                    <Route path="/menuShow" component={GetMenu}></Route>
+                    <Route path="/menuShow" component={ClientMenu}></Route>
                     <Route path="/order">
                         <Order />
                     </Route>
