@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
+    
 @section('content')
-<div id="root">i am in dex</div>
+<div class="content">
+    
+    <div id="root">i am in dex</div>
+   
+    
+</div>
+
 
 @endsection

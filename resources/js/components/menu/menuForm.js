@@ -95,11 +95,13 @@ class MenuForm extends React.Component {
             catNum: fname.catNum,
             note: note.val
         };
+
+        //dilivery price should be passed in controller
+        //axios.get("api/menu/show/" + { str_tbl });
         //alert("sending data" + JSON.stringify(data));
         axios
-            .post("api/menu/store/?tbl=", data, {})
-            //.post("api/menu", JSON.stringify(data), {})
-
+            //.post("api/menu/store/?shop_id=" + this.props.shopId, data, {})
+            .post("api/menu/store/" + this.props.tblString, data, {})
             // receive two parameter endpoint url ,form data
             //})
             .then(res => {

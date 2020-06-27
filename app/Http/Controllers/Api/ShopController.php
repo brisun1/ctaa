@@ -6,10 +6,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Resources\Shop as ShopResource;
 use App\Shop;
+use App\Menu;
+//use App\Delivery;
 use App\User;
 use App\CreateTbl;
 use Image;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Schema;
 //use Auth;
 class ShopController extends Controller
 {
@@ -64,25 +67,26 @@ class ShopController extends Controller
         $shop->name=$shopName;
         $shop->addr=$request->get('addr');
         $shop->area=$area;
+        
         $shop->owner_name=$request->get('ownerName');
         $shop->owner_mobl=$request->get('ownerMobl');
         $shop->phone=$request->get('phone');
         $shop->cter_mobl=$request->get('cterMobl');
         $shop->order_mobl=$request->get('orderMobl');
         
-        
-        $shop->is_completed=true;
-        $shop->open_hours=$request->get('openHours');
-        $shop->open_at=$request->get('openAt');
-        $shop->close_at=$request->get('closeAt');
-        // $shop->prom_txt1=$request->get('promTxt1');
-        // $shop->prom_txt2=$request->get('promTxt2');
-
-                
-        // $shop->img1="fffff";
-        // $shop->img2="fffff";
-        // $shop->img3="fffff";
-        // /////////////
+        $shop->is_completed=false;
+        $shop->week_open=$request->get('weekOpen');
+        $shop->week_close=$request->get('weekClose');
+        $shop->fri_open=$request->get('friOpen');
+        $shop->fri_close=$request->get('friClose');
+        $shop->sat_open=$request->get('satOpen');
+        $shop->sat_close=$request->get('satClose');
+        $shop->sun_open=$request->get('sunOpen');
+        $shop->sun_close=$request->get('sunClose');
+        $shop->prom_txt1=$request->get('promTxt1');
+        $shop->prom_txt2=$request->get('promTxt2');
+        $shop->prom_txt3=$request->get('promTxt3');
+       
          // Handle File Upload
          if($request->hasFile('image')){
             
@@ -95,7 +99,7 @@ class ShopController extends Controller
         
             $fileNameToStore= $filename.'_'.time().'.'.$extension;
             
-            Image::make($photo)->resize(null,300)->save(public_path('shop_img/'.$fileNameToStore));                
+            Image::make($photo)->resize(300,1200)->save(public_path('storage/shop_img/'.$fileNameToStore));                
            
           
             //Image::make($imgF)->resize(null,300)->save(public_path('test_img/'.$fileNameToStore));
@@ -108,9 +112,7 @@ class ShopController extends Controller
             $shop->img=$fileNameToStore;
 
         if($request->hasFile('promPic')){
-            
-            //$photo=$request->file('promPic');
-           
+                             
                 $photo=$request->file('promPic');
               
                 $filenameWithExt = $photo->getClientOriginalName();
@@ -121,16 +123,16 @@ class ShopController extends Controller
             
                 $fileNameToStore= $filename.'_'.time().'.'.$extension;
                 
-                Image::make($photo)->resize(null,200)->save(public_path('shop_img/'.$fileNameToStore));                
-                
+                Image::make($photo)->resize(null,200)->save(public_path('storage/shop_img/'.$fileNameToStore));                
                 
                 //$tbl_img='img'.$i;
                 $shop->img1=$fileNameToStore;     
-            }  else{
+            }  
+            // else{
                 
            
-                $shop->img1='no-user.jpg'; 
-            }    
+            //     $shop->img1='no-user.jpg'; 
+            // }    
               
         if($request->hasFile('promPic2')){
                  
@@ -143,15 +145,36 @@ class ShopController extends Controller
         
             $fileNameToStore= $filename.'_'.time().'.'.$extension;
                
-            Image::make($photo)->resize(null,200)->save(public_path('shop_img/'.$fileNameToStore));                
+            Image::make($photo)->resize(null,200)->save(public_path('storage/shop_img/'.$fileNameToStore));                
             $shop->img2=$fileNameToStore;     
             
-        }else{
+         }
+        //else{
                 
            
-            $shop->img2='no-user.jpg'; 
-        } 
-        $shop->img3='no-user.jpg';    
+        //     $shop->img2='no-user.jpg'; 
+        // } 
+        if($request->hasFile('promPic3')){
+                 
+            $photo=$request->file('promPic3');
+            $filenameWithExt = $photo->getClientOriginalName();
+        
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        
+            $extension = $photo->getClientOriginalExtension();
+        
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+               
+            Image::make($photo)->resize(null,200)->save(public_path('storage/shop_img/'.$fileNameToStore));                
+            $shop->img3=$fileNameToStore;     
+            
+        }
+        // else{
+                
+           
+        //     $shop->img3='no-user.jpg'; 
+        // } 
+         
         $shop->save();
         
         //create a menu tbl
@@ -171,9 +194,37 @@ class ShopController extends Controller
      */
     public function show()
     {
-       
+        //check if menu create
+
+     
+
         $shops=User::find(Auth::id())->shops;
-        return  ShopResource::collection($shops);
+        foreach ($shops as $shop) {
+            $sid=$shop->id;
+            $sname=$shop->name;
+            $sarea=$shop->area;
+            $tbl_name='menu_'.$sname.$sarea.$sid;
+            //check if menu is set
+            $menu=new Menu();
+            $menu->setTable($tbl_name);
+            $noMenu="";
+            if($menu->count()<5){
+                $noMenu=$sname.$sarea.$sid;
+            }
+            //check if delivery is set
+            //$deli=new Delivery();
+            $noDeli="";
+            $deli_bool=$shop->has('delivery')->count();
+            if($deli_bool==0){
+                $noDeli=$sname.$sarea.$sid;
+            }
+        }
+                
+        //return  ShopResource::collection($shops);
+        return  ShopResource::collection($shops)->additional(['meta' => [
+            'noMenu' => $noMenu,
+            'noDeli' => $noDeli,
+        ]]);
       
     }
 

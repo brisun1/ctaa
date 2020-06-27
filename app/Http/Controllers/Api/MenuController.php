@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Shop;
 use App\Menu;
 use App\Http\Resources\MenuCollection;
 use Illuminate\Support\Facades\Schema;
@@ -19,7 +20,18 @@ class MenuController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-      
+    // function __construct(Request $request ,$shop_id)
+    // {
+        
+    //     $shop=Shop::find($shop_id)->get();
+    //     $sid=$shop->id;
+    //     $sname=$shop->name;
+    //     $sarea=$shop->area;
+    //     $tbl_name='menu_'.$sname.$sarea.$sid;
+    //     $this->setTable($tbl_name);
+        
+    // }
+        
     public function index()
     {
        $menu=Menu::all();
@@ -44,11 +56,12 @@ class MenuController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $str_table)
     {
         // $menu=new Menu();
-        //      $menu->setTable("topshopclondalkin4_menu");
-        
+
+        // $menu->setTable("menu_".$str_table);
+        $tbl_name="menu_".$str_table;
         //validation goes here
        if($request->has('fname')){        
         $cat=$request->cat;
@@ -65,7 +78,7 @@ class MenuController extends Controller
            for($i=0;$i<sizeof($fname);$i++){
             if(isset($fname[$i])){
                 $menu=new Menu();
-                $menu->setTable("topshopclondalkin4_menu");
+                $menu->setTable($tbl_name);
                 $index=$catNum[$i];
                 $menu->fid=$fid[$i];
                 $menu->fname=$fname[$i];
@@ -95,19 +108,29 @@ class MenuController extends Controller
      */
     public function show($str_table)
     {
-        $menu=new Menu;
-        
-        $tbl_name=$str_table.'_menu';
+        // $tbl_bool=checkTable($shop_id);
+        // if($tbl_bool==false){return;}
+        //return;
+        // $menus=new Menu();
+        // $i=0;
+        // foreach($menus->get() as $menu){
+        //     if(isset($menu->fname)){
+        //         $data[$i]=$menu;
+        //     }
+        // }
+        $menu=new Menu();
+        $tbl_name="menu_".$str_table;
         $menu->setTable($tbl_name);
         if (!Schema::hasTable($tbl_name))
-        return;
+        // return;
        //return response()->json($menu->get());
     
    
         
         //     $data=new MenuResource($food);
            
-       return new MenuCollection($menu->get());
+       return new MenuCollection($menu);
+       else return;
        // return new MenuCollection($data);
       
     //   $data=Shop::find(1);
@@ -148,4 +171,14 @@ class MenuController extends Controller
     {
         //
     }
+    // public function checkTable($shop_id){
+    //     $shop=Shop::find($shop_id)->get();
+    //     $sid=$shop->id;
+    //     $sname=$shop->name;
+    //     $sarea=$shop->area;
+    //     $tbl_name='menu_'.$sname.$sarea.$sid;
+    //     if (!Schema::hasTable($tbl_name)){
+    //         $tbl_exist=false;
+    //     }
+    // }
 }

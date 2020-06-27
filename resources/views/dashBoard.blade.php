@@ -15,8 +15,11 @@
                     @endif
                         Dash Page
                     You are logged in!
+                    {{-- <div id="client2">client2</div> --}}
+                    {{-- <div id="client3">client 3</div> --}}
+                    <div id="client">client for dash copn</div>
+                    
                 </div>
-            <div id="client">client for dash copn</div>
             </div>
         </div>
     </div>

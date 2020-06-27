@@ -9,10 +9,15 @@ use App\Shop;
 class Menu extends Model
 {
  
-    // function __construct($tbl_name=null)
+    // function __construct($shop_id=null)
     // {
     //     parent::__construct();
-    //     $this->setTable($tbl_name);
+    //     $shop=Shop::find($shop_id)->get();
+    //     $sid=$shop->id;
+    //     $sname=$shop->name;
+    //     $sarea=$shop->area;
+    //     $tbl_name='menu_'.$sname.$sarea.$sid;
+    //     $this->table=$tbl_name;
         
     // }
     

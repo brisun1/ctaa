@@ -11,13 +11,16 @@
 
     <!-- Scripts -->
     
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    {{-- google maps --}}
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="../../style.css" />
 </head>
 <body>
     <div id="app">
@@ -76,6 +79,11 @@
             @yield('content')
         </main>
     </div>
+    {{-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD6bth8x9c4ekzB3kBkAV288r1ir5PIwc&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script> --}}
     <script src="{{ asset('js/app.js') }}" ></script>
+    
 </body>
 </html>

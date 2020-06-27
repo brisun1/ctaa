@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashBoardController extends Controller
 {
@@ -23,6 +24,9 @@ class DashBoardController extends Controller
      */
     public function index()
     {
+        if(Auth::user()->role=='client')
         return view('dashBoard');
+        if(Auth::user()->role=='customer')
+        return view('customer');
     }
 }

@@ -1,0 +1,8 @@
+#map {
+    height: 40%;
+}
+.form-horizontal .control-label {
+    /* text-align:right; */
+    text-align: left;
+    margin-left: 3;
+}

@@ -24,7 +24,7 @@ class CreateTbl extends Model
             $sid=$shop->id;
             $sname=$shop->name;
             $sarea=$shop->area;
-            $tbl_name=$sname.$sarea.$sid.'_menu';
+            $tbl_name='menu_'.$sname.$sarea.$sid;
             
                 if (!Schema::hasTable($tbl_name)){
                     Schema::create($tbl_name, function($table)

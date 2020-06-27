@@ -21,4 +21,12 @@ class Shop extends Model
     //         'id' // Local key on menus table...
     //     );
     // }
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
+    public function delivery()
+    {
+        return $this->hasOne('App\Delivery');
+    }
 }

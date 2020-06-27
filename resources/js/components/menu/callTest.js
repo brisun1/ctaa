@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 class CallTest extends Component {
     state = {};
     componentDidMount() {
@@ -10,8 +11,46 @@ class CallTest extends Component {
     //     let menu = sData.data;
     render() {
         console.log("test render");
-        return <div>Tesr call</div>;
+        return (
+            <div>
+                <table className="table-bordered">
+                    <div>ggggg</div>
+                    <tr>
+                        <td>1ffff</td>
+                        <td>1ffffkkkkkkkkk</td>
+                        <td>1f</td>
+                    </tr>
+                    <tr>
+                        <td>2ffff</td>
+                        <td>2ffffkkkkkkkkk</td>
+                        <td>2f</td>
+                    </tr>
+                    <tr>
+                        <td>3ffff</td>
+                        <td>3ff</td>
+                        <td>3fkkkkkkkkkkkkkkkk</td>
+                    </tr>
+                    <div>ggggg33333333</div>
+                    <tr>
+                        <td>1ffff</td>
+                        <td>1ffffkkkkkkkkk</td>
+                        <td>1f</td>
+                    </tr>
+                    <tr>
+                        <td>2ffff</td>
+                        <td>2ffffkkkkkkkkk</td>
+                        <td>2f</td>
+                    </tr>
+                    <tr>
+                        <td>3ffff</td>
+                        <td>3ff</td>
+                        <td>3fkkkkkkkkkkkkkkkk</td>
+                    </tr>
+                </table>
+            </div>
+        );
     }
 }
 
 export default CallTest;
+//ReactDOM.render(<CallTest />, document.getElementById("test"));

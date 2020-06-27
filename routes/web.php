@@ -16,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+//Route::view('/{path?}','index');
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::get('/dashBoard', 'DashBoardController@index')->name('dashBoard');
+Route::get('/{path?}', [
+    'uses' => 'ReactController@show',
+    'as' => 'react',
+    'where' => ['path' => '.*']
+]);
 Route::get('/', function () {
     return view('index');
 });
@@ -24,4 +33,7 @@ Route::get('/', function () {
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/dashBoard', 'DashBoardController@index')->name('dashBoard');
+
+Route::get('/map', function () {
+    return view('mapTest');
+});
