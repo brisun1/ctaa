@@ -4,6 +4,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
+    Link,
     NavLink,
     Redirect
 } from "react-router-dom";
@@ -11,12 +12,15 @@ import ReactDOM from "react-dom";
 //import ClientApp from "./clientApp";
 //import Order from "./orders/order";
 import MenuForm from "../menu/menuForm";
-import MenuShow from "../menu/menuShow";
+import ClientMenu from "../menu/clientMenu";
+import EditMenu from "../menu/editMenu";
 import ShopApp from "./shopApp";
-import CreateShop from "./createShop";
-import ClientShops from "./client/clientShops";
-import DeliForm from "../menu/deliveryForm";
+import CreateShop from "./client/createShop";
+
+import DeliForm from "../delivery/deliveryForm";
 import DeliShow from "../menu/deliShow";
+import ShopDetail from "./shopDetail";
+import EditShop from "./client/editShop";
 
 class ShopIndex extends Component {
     state = {
@@ -62,10 +66,11 @@ class ShopIndex extends Component {
                 }
                 this.setState({ links });
             } else {
-                // const schedule={...this.state.schedule};
-                //schedule.name="createShop";
+                const schedule = { ...this.state.schedule };
+                schedule.name = "createShop";
                 this.setState({
-                    name: "createShop"
+                    schedule
+                    //name: "createShop"
                 });
                 links.push("createShop");
                 this.setState({ links });
@@ -83,7 +88,7 @@ class ShopIndex extends Component {
                 to="/createShop"
                 activeClassName="bg-warning pl-3 pr-3"
             >
-                Create shop
+                Create Shop
             </NavLink>
         );
         const shopShow = (
@@ -92,7 +97,7 @@ class ShopIndex extends Component {
                 to="/shopShow"
                 activeClassName="bg-warning pl-3 pr-3"
             >
-                Show shops
+                Show Shop
             </NavLink>
         );
         const createMenu = (
@@ -101,7 +106,7 @@ class ShopIndex extends Component {
                 to="/createMenu"
                 activeClassName="bg-warning pl-3 pr-3"
             >
-                Create menu
+                Create Menu
             </NavLink>
         );
         const menuShow = (
@@ -110,7 +115,7 @@ class ShopIndex extends Component {
                 to="/menuShow"
                 activeClassName="bg-warning pl-3 pr-3"
             >
-                Show menu
+                Show Menu
             </NavLink>
         );
         const createDeli = (
@@ -124,11 +129,11 @@ class ShopIndex extends Component {
         );
         const deliShow = (
             <NavLink
-                key="ss"
+                key="ds"
                 to="/deliShow"
                 activeClassName="bg-warning pl-3 pr-3"
             >
-                Delivery price
+                Delivery Price
             </NavLink>
         );
         const { links } = this.state;
@@ -140,23 +145,28 @@ class ShopIndex extends Component {
     };
 
     render() {
+        let tblString = "";
+        if (this.state.shop[0]) {
+            const shop = this.state.shop[0];
+            tblString = shop.shopName + shop.area + shop.id;
+        }
         return (
             <div>
                 <Router>
                     <nav className="d-flex justify-content-around bg-light">
                         <NavLink
-                            to="/clientShops"
+                            to="/shopDefault"
                             activeClassName="bg-warning pl-3 pr-3"
                         >
-                            default page
+                            Default Page
                         </NavLink>
                         {this.getLinks()}
                     </nav>
                     <Switch>
                         <Route exact path="/clientShops">
-                            <Redirect to="shopsDefault" />
+                            <Redirect to="shopDefault" />
                         </Route>
-                        <Route exact path="/shopsDefault">
+                        <Route exact path="/shopDefault">
                             <ShopApp data={this.state} />
                         </Route>
 
@@ -167,24 +177,26 @@ class ShopIndex extends Component {
                         ></Route>
 
                         <Route exact path="/shopShow">
-                            <ClientShops shop={this.state.shop} />
+                            <ShopDetail shop={this.state.shop[0]} num={0} />
+                        </Route>
+                        <Route exact path="/editShop">
+                            <EditShop shop={this.state.shop[0]} num={0} />
                         </Route>
 
                         <Route exact path="/createMenu">
-                            <MenuForm
-                                tblString={this.state.schedule.tblString}
-                            />
+                            <MenuForm tblString={tblString} />
                         </Route>
                         <Route exact path="/menuShow">
-                            <MenuShow shop={this.state.shop} />
+                            <ClientMenu tblString={tblString} />
+                        </Route>
+                        <Route exact path="/editMenu">
+                            <EditMenu tblString={tblString} />
                         </Route>
                         <Route exact strict path="/default">
                             <ShopApp data={this.state} />
                         </Route>
                         <Route exact path="/createDeli">
-                            <DeliForm
-                                tblString={this.state.schedule.tblString}
-                            />
+                            <DeliForm shop={this.state.shop[0]} />
                         </Route>
                         <Route exact path="/deliShow">
                             <DeliShow shop={this.state.shop} />

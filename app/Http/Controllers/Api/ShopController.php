@@ -99,7 +99,7 @@ class ShopController extends Controller
         
             $fileNameToStore= $filename.'_'.time().'.'.$extension;
             
-            Image::make($photo)->resize(300,1200)->save(public_path('storage/shop_img/'.$fileNameToStore));                
+            Image::make($photo)->resize(1280,720)->save(public_path('storage/shop_img/'.$fileNameToStore));                
            
           
             //Image::make($imgF)->resize(null,300)->save(public_path('test_img/'.$fileNameToStore));
@@ -181,7 +181,7 @@ class ShopController extends Controller
         $newTbl=new CreateTbl();
         $newTbl->create_menu_tbl();
         $newTbl->create_menu_tbl();
-        return "success post";
+        return "shop success";
         //return view('client.forms');
         
     }
@@ -196,9 +196,8 @@ class ShopController extends Controller
     {
         //check if menu create
 
-     
-
         $shops=User::find(Auth::id())->shops;
+        if($shops->count()>0){
         foreach ($shops as $shop) {
             $sid=$shop->id;
             $sname=$shop->name;
@@ -208,14 +207,16 @@ class ShopController extends Controller
             $menu=new Menu();
             $menu->setTable($tbl_name);
             $noMenu="";
-            if($menu->count()<5){
+            if($menu->count()<1){
                 $noMenu=$sname.$sarea.$sid;
             }
             //check if delivery is set
             //$deli=new Delivery();
+            $deli=$shop->delivery;
+            
             $noDeli="";
-            $deli_bool=$shop->has('delivery')->count();
-            if($deli_bool==0){
+            
+            if(!$deli){
                 $noDeli=$sname.$sarea.$sid;
             }
         }
@@ -225,6 +226,7 @@ class ShopController extends Controller
             'noMenu' => $noMenu,
             'noDeli' => $noDeli,
         ]]);
+        }else return;
       
     }
 
@@ -246,9 +248,177 @@ class ShopController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        // $this->validate($request, [
+        //     'uname' => 'required|string|max:30',
+        //     'city' => 'required|string|max:30',
+        //     'tel' => 'required|string|max:40',
+        //     'intro' => 'required|string|max:700',
+        //     'addr1'=>'required|string|max:60',
+        //     'addr2'=>'required|string|max:60',
+        //     'age'=>'required|numeric|max:99',
+        //     'national'=>'string|max:15|nullable',
+        //     'shape'=>'string|max:8|nullable',
+        //     'skin'=>'string|max:8|nullable',
+        //     'height'=>'numeric|max:5|nullable',
+        //     'chest'=>'numeric|max:100|nullable',
+        //     'waist'=>'numeric|max:100|nullable',
+        //     'weight'=>'numeric|max:300|nullable',
+        //     'lan1'=>'string|max:15|nullable',
+        //     'lan2'=>'string|max:15|nullable',
+        //     'lan_des'=>'string|max:45|nullable',
+        //     'price30'=>'numeric|max:99999|nullable',
+        //     'price1h'=>'numeric|max:99999|nullable',
+        //     'price_out'=>'numeric|max:9999999|nullable',
+        //     'price_note'=>'string|max:45|nullable',
+        //     'service_des'=>'string|max:100|nullable',
+        //     'special_serv'=>'string|max:100|nullable',
+        //     'western_serv'=>'in:1|nullable',
+        //     'img0'=>'image|mimes:jpeg,bmp,png|size:10000|nullable',
+        //     'img1'=>'image|mimes:jpeg,bmp,png|size:10000|nullable',
+        //     'img2'=>'image|mimes:jpeg,bmp,png|size:10000|nullable',
+        //     'img3'=>'image|mimes:jpeg,bmp,png|size:10000|nullable',
+        //     'img4'=>'image|mimes:jpeg,bmp,png|size:10000|nullable',
+        //     'img5'=>'image|mimes:jpeg,bmp,png|size:10000|nullable',
+        //     'img6'=>'image|mimes:jpeg,bmp,png|size:10000|nullable',
+        //     'img7'=>'image|mimes:jpeg,bmp,png|size:10000|nullable',
+        //     'img8'=>'image|mimes:jpeg,bmp,png|size:10000|nullable',
+        //     'img9'=>'image|mimes:jpeg,bmp,png|size:10000|nullable'
+        // ]);
+        ////
+        
+        $id=$request->get('id');
+        
+        if($request->get('id')){
+        $id=$request->get('id');
+        $shop=Shop::find($id);
+       if($shop){
+           $original_menu=$shop->name.$shop->area.$shop->id;
+       }
+        //$shop->user_id=Auth::id();auth('api')->user()
+        //return "auth uer id ".Auth::id()."tttttttt";
+       
+        //$shop->user_id=$request->userId;
+        $shop->shop_id=$request->id;
+        $shop->name=$request->get('shopName');;
+        $shop->addr=$request->get('addr');
+        $shop->area=$request->get('area');
+        
+        $shop->owner_name=$request->get('ownerName');
+        $shop->owner_mobl=$request->get('ownerMobl');
+        $shop->phone=$request->get('phone');
+        $shop->cter_mobl=$request->get('cterMobl');
+        $shop->order_mobl=$request->get('orderMobl');
+        
+        $shop->is_completed=false;
+        $shop->week_open=$request->get('weekOpen');
+        $shop->week_close=$request->get('weekClose');
+        $shop->fri_open=$request->get('friOpen');
+        $shop->fri_close=$request->get('friClose');
+        $shop->sat_open=$request->get('satOpen');
+        $shop->sat_close=$request->get('satClose');
+        $shop->sun_open=$request->get('sunOpen');
+        $shop->sun_close=$request->get('sunClose');
+        $shop->prom_txt1=$request->get('promTxt1');
+        $shop->prom_txt2=$request->get('promTxt2');
+        $shop->prom_txt3=$request->get('promTxt3');
+       
+         // Handle File Upload
+         if($request->hasFile('image')){
+            
+            $photo=$request->file('image');
+            $filenameWithExt = $photo->getClientOriginalName();
+        
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        
+            $extension = $photo->getClientOriginalExtension();
+        
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+           
+            Image::make($photo)->resize(1280,720)->save(public_path('storage/shop_img/'.$fileNameToStore));                
+            $shop->img=$fileNameToStore;
+          
+            //Image::make($imgF)->resize(null,300)->save(public_path('test_img/'.$fileNameToStore));
+           
+            }
+            
+
+        if($request->hasFile('promPic')){
+                             
+                $photo=$request->file('promPic');
+              
+                $filenameWithExt = $photo->getClientOriginalName();
+            
+                $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            
+                $extension = $photo->getClientOriginalExtension();
+            
+                $fileNameToStore= $filename.'_'.time().'.'.$extension;
+                
+                Image::make($photo)->resize(null,200)->save(public_path('storage/shop_img/'.$fileNameToStore));                
+                
+                //$tbl_img='img'.$i;
+                $shop->img1=$fileNameToStore;     
+            }  
+            // else{
+                
+           
+            //     $shop->img1='no-user.jpg'; 
+            // }    
+              
+        if($request->hasFile('promPic2')){
+                 
+            $photo=$request->file('promPic2');
+            $filenameWithExt = $photo->getClientOriginalName();
+        
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        
+            $extension = $photo->getClientOriginalExtension();
+        
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+               
+            Image::make($photo)->resize(null,200)->save(public_path('storage/shop_img/'.$fileNameToStore));                
+            $shop->img2=$fileNameToStore;     
+            
+         }
+        //else{
+                
+           
+        //     $shop->img2='no-user.jpg'; 
+        // } 
+        if($request->hasFile('promPic3')){
+                 
+            $photo=$request->file('promPic3');
+            $filenameWithExt = $photo->getClientOriginalName();
+        
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        
+            $extension = $photo->getClientOriginalExtension();
+        
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+               
+            Image::make($photo)->resize(null,200)->save(public_path('storage/shop_img/'.$fileNameToStore));                
+            $shop->img3=$fileNameToStore;     
+            
+        }
+        // else{
+                
+           
+        //     $shop->img3='no-user.jpg'; 
+        // } 
+         
+        $shop->save();
+        
+            $new_menu=$request->get('shopName').$request->get('area').$request->get('id');
+            //change menu tbl name
+            if($original_menu!=$new_menu){
+            
+                Schema::rename('menu_'.$original_menu, 'menu_'.$new_menu);
+            }
+        
+        return "shop update success";
+        }
     }
 
     /**

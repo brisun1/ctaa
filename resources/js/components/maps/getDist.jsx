@@ -22,6 +22,7 @@ export default function getDist(o, d) {
                 console.log(
                     "respppppp" + response.rows[0].elements[0].distance.text
                 );
+                return response.rows[0].elements[0].distance.text;
             }
         }
     );

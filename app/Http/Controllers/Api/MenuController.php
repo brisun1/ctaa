@@ -9,8 +9,7 @@ use App\Shop;
 use App\Menu;
 use App\Http\Resources\MenuCollection;
 use Illuminate\Support\Facades\Schema;
-
-
+use Illuminate\Support\Facades\DB;
 
 class MenuController extends Controller
 {
@@ -71,6 +70,7 @@ class MenuController extends Controller
         $price=$request->price;
         $catNum=$request->catNum;
         $note=$request->note;
+        $isMain=$request->isMain;
        }
         //$msg=var_dump($data));
        // $cat=json_encode($data);
@@ -85,19 +85,29 @@ class MenuController extends Controller
                 $menu->price=$price[$i];
                 $menu->catNum=$index;
                 $menu->cat=$cat[$index];
+                //if(!$isMain[$index]){$isMain[$index]=0;}
+                $menu->isMain=$isMain[$index];
                 if(isset($note[$i])){
                     $menu->note=$note[$i];
-                }else{
-                    $menu->note=""; 
                 }
-               
+                
+
                 $menu->save();
             }
                 
            }
+            $menu=new Menu();
+            $menu->setTable($tbl_name);
+            $menu->fid="---";
+            $menu->fname="Fried rice with main food";
+            $menu->price=$request->frice;
+            $menu->cat="addition";
+            $menu->catNum=max($catNum)+1;
+            $menu->isMain=0;
+            $menu->save();
        }
             
-        return "Helloppppppppppppppppppppppppppp";
+        return "menu success";
     }
 
     /**
@@ -121,7 +131,7 @@ class MenuController extends Controller
         $menu=new Menu();
         $tbl_name="menu_".$str_table;
         $menu->setTable($tbl_name);
-        if (!Schema::hasTable($tbl_name))
+        if (Schema::hasTable($tbl_name))
         // return;
        //return response()->json($menu->get());
     
@@ -129,7 +139,7 @@ class MenuController extends Controller
         
         //     $data=new MenuResource($food);
            
-       return new MenuCollection($menu);
+       return new MenuCollection($menu->get());
        else return;
        // return new MenuCollection($data);
       
@@ -156,9 +166,47 @@ class MenuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $string_tbl)
     {
-        //
+        //return "i am a return".json_decode($request->get('menu'));
+        //$request->get('cats');
+        $tbl_name="menu_".$string_tbl;
+        
+             $foods=$request->get('menu');
+             $cats=$request->get('cats');
+             $isMains=$request->get('isMains');
+            //  for($i=1;$i<=$cats.length;$i++){
+            //      $cat[$i]=
+            //  }
+        //     $menu=new Menu;
+        //     $menu->setTable($tbl_name);
+        //    $menu->delete();
+        DB::table($tbl_name)->delete();
+             foreach($foods as $food){
+                $menu=new Menu();
+                $menu->setTable($tbl_name);
+                if($food["fname"]){
+                 $menu->fid=$food["fid"];
+                 $menu->fname=$food["fname"];
+                 $menu->price=$food["price"];
+                 $menu->note=$food["note"];
+                 $menu->catNum=$food["catNum"];
+                 $menu->cat=$cats[$food["catNum"]];
+                 $menu->isMain=$isMains[$food["catNum"]];
+                 $menu->save();
+             }}
+
+             $menu=new Menu();
+             $menu->setTable($tbl_name);
+             $menu->fid="---";
+             $menu->fname="Fried rice with main food";
+             $menu->price=$request->frice;
+             $menu->cat="addition";
+             $menu->catNum=99;
+             $menu->isMain=0;
+             $menu->save();
+            
+        return "menu update success";
     }
 
     /**

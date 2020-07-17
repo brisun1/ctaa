@@ -6,3 +6,55 @@
     text-align: left;
     margin-left: 3;
 }
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.popup\_inner {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%;
+    margin: auto;
+    border-radius: 20px;
+    background: white;
+}
+.mm {
+    background-color: darkblue;
+}
+.rmodal {
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0.26); */
+    position: absolute;
+    /* top: 20vh; */
+    /* left: 27%; */
+}
+.fixed {
+    max-width: 39rem;
+    /* min-height: 33rem; */
+    background: rgb(73, 67, 2);
+    position: fixed;
+    top: 4vh;
+
+    color: white;
+}
+.rmodal_header {
+    padding: 1rem;
+    margin-right: 7px;
+    background-color: #876a01;
+    color: white;
+}
+
+@media (min-width: 535px) {
+    .rmodal {
+        width: 30rem;
+        left: calc((100%-50rem) / 2);
+    }
+}

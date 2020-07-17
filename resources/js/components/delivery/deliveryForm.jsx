@@ -88,7 +88,6 @@ export default class DeliveryForm extends Component {
     };
 
     handleSubmit = event => {
-        alert("shop name was submitted22222: ");
         event.preventDefault();
 
         axios

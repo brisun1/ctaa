@@ -35,7 +35,8 @@ class CreateTbl extends Model
                         $table->unsignedDecimal('price', 5, 2);
                         $table->string('cat',20);
                         $table->smallInteger('catNum');
-                        $table->string('note',120);
+                        $table->string('note',120)->nullable();
+                        $table->boolean('isMain');
                         $table->timestamps();
                     });
                 }

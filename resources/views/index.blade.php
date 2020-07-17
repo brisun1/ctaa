@@ -3,8 +3,23 @@
     
 @section('content')
 <div class="content">
+    <div class="container">
+        {{-- <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Home</div>
     
-    <div id="root">i am in dex</div>
+                    <div class="card-body">
+                        <div id="root"></div>
+                   
+                       
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+        <div id="root"></div>
+    </div>
+    
    
     
 </div>

@@ -16,27 +16,34 @@ class Shop extends JsonResource
     {
         //return parent::toArray($request);
         return [
+           
             'id' => $this->id,
-            'name' => $this->name,
+            'shopName' => $this->name,
             'addr' => $this->addr,
             'shop_id' => $this->shop_id,
             'area' => $this->area,
             'phone' => $this->phone,
-            'owner_name' => $this->owner_name,
-            'owner_mobl' => $this->owner_mobl,
-            'cter_mobl' => $this->cter_mobl,
-            'order_mobl' => $this->order_mobl,
-            'open_hours' => $this->open_hours,
-            'open_at' => $this->open_at,
-            'close_at' => $this->close_at,
+            'ownerName' => $this->owner_name,
+            'ownerMobl' => $this->owner_mobl,
+            'cterMobl' => $this->cter_mobl,
+            'orderMobl' => $this->order_mobl,
+            'weekOpen'=>$this->week_open,
+            'weekClose'=>$this->week_close,
+            'friOpen'=>$this->fri_open,
+            'friClose'=>$this->fri_close,
+            'satOpen'=>$this->sat_open,
+            'satClose'=>$this->sat_close,
+            'sunOpen'=>$this->sun_open,
+            'sunClose'=>$this->sun_close,
+           
             'img' => $this->img,
             'img1' => $this->img1,
-            'prom_txt1'=>$this->prom_txt1,
+            'promTxt1'=>$this->prom_txt1,
             'img2' => $this->img2,
-            'prom_txt2'=>$this->prom_txt2,
+            'promTxt2'=>$this->prom_txt2,
             'img3' => $this->img3,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'promTxt3'=>$this->prom_txt3
+            
         ];
     }
 }

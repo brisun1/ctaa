@@ -7,7 +7,9 @@ class MenuForm extends React.Component {
         super(props);
 
         this.state = {
+            frice: 2,
             cats: ["", ""],
+            isMains: [false, false],
             inputs: [1, 2, 3, 4, 5],
             inpVal: {
                 fid: {
@@ -27,6 +29,7 @@ class MenuForm extends React.Component {
                     val: ["", "", "", "", ""],
                     catNum: [0, 0, 0, 1, 1]
                 },
+                isMain: [false, false, false, false, false],
                 note: {
                     id: null,
                     val: ["", "", "", "", ""],
@@ -70,9 +73,24 @@ class MenuForm extends React.Component {
         inpVal[name].val[index] = value;
         this.setState({ inpVal });
     };
+    handleFrice = e => {
+        this.setState({ frice: e.target.value });
+    };
     handleCat = (e, ci) => {
         const inpVal = { ...this.state.inpVal };
         inpVal.cat[ci] = e.target.value;
+        this.setState({ inpVal });
+    };
+    handleIsMain = (e, ci) => {
+        // this.setState({
+        //     deliPrice: event.target.value,
+        //     isDeli: !this.state.isDeli
+        // });
+        const isMains = { ...this.state.isMains };
+        isMains[ci] = !isMains[ci];
+        const inpVal = { ...this.state.inpVal };
+        inpVal.isMain[ci] = !inpVal.isMain[ci];
+        this.setState({ isMains });
         this.setState({ inpVal });
     };
     handleSubmit = event => {
@@ -89,11 +107,13 @@ class MenuForm extends React.Component {
         const { fid, fname, price, note, cat } = this.state.inpVal;
         const data = {
             cat: cat,
+            isMain: this.state.isMains,
             fid: fid.val,
             fname: fname.val,
             price: price.val,
             catNum: fname.catNum,
-            note: note.val
+            note: note.val,
+            frice: this.state.frice
         };
 
         //dilivery price should be passed in controller
@@ -106,16 +126,19 @@ class MenuForm extends React.Component {
             //})
             .then(res => {
                 // then print response status
-                console.log("data isssssssss" + res);
-                //console.log(res);
+                console.log("check responnn" + res.data);
+                if (res.data == "menu success")
+                    window.location.replace("/dashBoard");
+
                 //console.log(res.statusText);
             });
     };
 
     render() {
-        console.log("propspppp" + JSON.stringify(this.props));
         return (
             <form onSubmit={this.handleSubmit}>
+                <br />
+                <br />
                 <h5 className="text-center">Menu Register Form</h5>
                 <h6 className="text-center">Menu Register Form</h6>
                 <hr />
@@ -135,16 +158,29 @@ class MenuForm extends React.Component {
                         <div key={"divk" + ci}>
                             <Fragment>
                                 <label className="text-info">
-                                    Category{ci + 1}:
+                                    Category {ci + 1}:
+                                    <input
+                                        key={"c" + ci}
+                                        id={"cat" + ci}
+                                        name="cat"
+                                        className="ml-2"
+                                        value={this.state.inpVal.cat[ci]}
+                                        onChange={e => this.handleCat(e, ci)}
+                                    />
                                 </label>
-                                <input
-                                    key={"c" + ci}
-                                    id={"cat" + ci}
-                                    name="cat"
-                                    className="ml-2"
-                                    value={this.state.inpVal.cat[ci]}
-                                    onChange={e => this.handleCat(e, ci)}
-                                />
+                                <label className="ml-2">
+                                    Is main food:
+                                    <input
+                                        name="isMain"
+                                        type="checkbox"
+                                        className="ml-2"
+                                        //onChange={event => this.handleRadio(event)}
+
+                                        value={this.state.inpVal.isMain[ci]}
+                                        checked={this.state.isMains[ci] == true}
+                                        onChange={e => this.handleIsMain(e, ci)}
+                                    />
+                                </label>
                             </Fragment>
 
                             {this.state.inputs.map((input, index) => {
@@ -162,7 +198,7 @@ class MenuForm extends React.Component {
                                                 key={"fid" + ci + "" + index}
                                                 id={"fid" + ci + "0" + index}
                                                 name="fid"
-                                                className="col"
+                                                className="col-md"
                                                 placeholder="  编   号"
                                                 value={
                                                     this.state.inpVal.fid.val[
@@ -181,7 +217,7 @@ class MenuForm extends React.Component {
                                                 key={"fn" + ci + "" + index}
                                                 id={"fn" + ci + "0" + index}
                                                 name="fname"
-                                                className="col"
+                                                className="col-lg"
                                                 value={
                                                     this.state.inpVal.fname.val[
                                                         index
@@ -200,7 +236,7 @@ class MenuForm extends React.Component {
                                                 key={"price" + ci + "" + index}
                                                 id={"price" + ci + "0" + index}
                                                 name="price"
-                                                className="col"
+                                                className="col-md"
                                                 value={
                                                     this.state.inpVal.price.val[
                                                         index
@@ -215,11 +251,12 @@ class MenuForm extends React.Component {
                                                     )
                                                 }
                                             />
+
                                             <input
                                                 key={"note" + ci + "" + index}
                                                 id={"note" + ci + "0" + index}
                                                 name="note"
-                                                className="col"
+                                                className="col-sm"
                                                 value={
                                                     this.state.inpVal.note.val[
                                                         index
@@ -241,26 +278,42 @@ class MenuForm extends React.Component {
                             <input
                                 key={"bti".ci}
                                 type="button"
-                                className="btn btn-secondary mt-1 ml-1"
-                                value="add Input"
+                                className="btn btn-light mt-1 ml-1 font-weight-bold"
+                                value="Add Input line"
                                 onClick={e => this.addInputs(e, ci)}
                             />
                         </div>
                     );
                 })}
+
                 <input
                     key="addC"
                     type="button"
                     className="btn btn-info mt-1 ml-1"
-                    value="add cat"
+                    value="Add Category"
                     onClick={e => this.addCat(e)}
                 />
                 <hr />
 
+                <div className="form-group">
+                    <label className="control-label">
+                        Fried rice goes with main food:
+                        <input
+                            key="frPrice"
+                            id="frPrice"
+                            name="price"
+                            className="ml-2"
+                            value={this.state.frice}
+                            placeholder="  价   格"
+                            onChange={e => this.handleFrice(e)}
+                        />
+                    </label>
+                </div>
+
                 <input
                     key="submitk"
                     type="submit"
-                    className="btn btn-primary ml-1"
+                    className="btn btn-success ml-1"
                     value="Submit"
                 />
             </form>

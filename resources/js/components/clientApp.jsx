@@ -7,7 +7,7 @@ import {
     Redirect
 } from "react-router-dom";
 import ReactDOM from "react-dom";
-import ClientShops from "./shop/client/clientShops";
+//import ClientShops from "./shop/client/clientShops";
 //import CreateShop from "../components/shop/createShop";
 import MenuForm from "./menu/menuForm";
 import ClientMenu from "./menu/clientMenu";

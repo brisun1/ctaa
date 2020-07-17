@@ -17,7 +17,9 @@
     {{-- google maps --}}
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     
-
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSpqzmqRGb3HK-tspTuMSzMfnGdGIlF9s&callback=initMap">
+</script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="../../style.css" />
@@ -75,7 +77,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="container">
             @yield('content')
         </main>
     </div>

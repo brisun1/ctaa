@@ -16,15 +16,12 @@ require("./components/Example");
 require("./components/clientApp");
 //shops
 require("./components/shop/shopDetail");
-require("./components/shop/createShop");
-require("./components/shop/client/clientShops");
+// require("./components/shop/createShop");
+
 require("./components/shop/facia");
 require("./components/shop/client/createShop");
-require("./components/shop/test");
-require("./components/shop/test1");
-require("./components/t11");
-require("./components/t22");
-require("./components/t33");
+require("./components/shop/client/editShop");
+require("./components/shop/favorShop");
 //require("./components/shop/shops");
 //menu
 require("./components/menu/menuForm");
@@ -32,10 +29,12 @@ require("./components/menu/menuShow");
 require("./components/menu/clientMenu");
 require("./components/menu/deliShow");
 //require("./components/menu/callTest");
+//delivery
+
+require("./components/delivery/deliShow");
 //maps
 require("./components/maps/map");
 require("./components/maps/getDist");
 //require("./components/routeTest");
 //general
 require("./components/clientIndex");
-require("./components/nestT");

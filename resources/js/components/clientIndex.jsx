@@ -11,11 +11,21 @@ import ClientApp from "./clientApp";
 import Order from "./orders/order";
 //import ClientShops from "./shop/clientShops";
 import ShopIndex from "./shop/shopIndex";
+import { Icon } from "@iconify/react";
+import homeIcon from "@iconify/icons-mdi-light/home";
+
 class ClientIndex extends Component {
     state = {};
     render() {
         return (
             <div>
+                <a href="/">
+                    <Icon
+                        icon={homeIcon}
+                        style={{ fontSize: 30, color: "#f59542" }}
+                    />
+                    Home
+                </a>
                 <Router>
                     <nav className="d-flex justify-content-around bg-success">
                         <NavLink

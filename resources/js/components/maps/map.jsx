@@ -44,6 +44,6 @@ export default class Map extends Component {
     }
 
     render() {
-        return <div style={{ width: "100vw", height: "55vh" }} id="map" />;
+        return <div style={{ width: "88vw", height: "55vh" }} id="map" />;
     }
 }
