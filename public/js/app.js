@@ -161,6 +161,18 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
 /***/ "./node_modules/@iconify/icons-mdi-light/home.js":
 /*!*******************************************************!*\
   !*** ./node_modules/@iconify/icons-mdi-light/home.js ***!
@@ -7930,7 +7942,64 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "#map {\n    height: 40%;\n}\n.form-horizontal .control-label {\n    /* text-align:right; */\n    text-align: left;\n    margin-left: 3;\n}\n.popup {\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    margin: auto;\n    background-color: rgba(0, 0, 0, 0.5);\n}\n.popup_inner {\n    position: absolute;\n    left: 25%;\n    right: 25%;\n    top: 25%;\n    bottom: 25%;\n    margin: auto;\n    border-radius: 20px;\n    background: white;\n}\n.mm {\n    background-color: darkblue;\n}\n.rmodal {\n    /* box-shadow: 0 2px 8px rgba(0, 0, 0.26); */\n    position: absolute;\n    /* top: 20vh; */\n    /* left: 27%; */\n}\n.fixed {\n    max-width: 39rem;\n    /* min-height: 33rem; */\n    background: rgb(73, 67, 2);\n    position: fixed;\n    top: 4vh;\n\n    color: white;\n}\n.rmodal_header {\n    padding: 1rem;\n    margin-right: 7px;\n    background-color: #876a01;\n    color: white;\n}\n\n@media (min-width: 535px) {\n    .rmodal {\n        width: 30rem;\n        left: calc((100%-50rem) / 2);\n    }\n}\n", ""]);
+exports.push([module.i, "#map {\n    height: 40%;\n}\n.form-horizontal .control-label {\n    /* text-align:right; */\n    text-align: left;\n    margin-left: 3;\n}\n.popup {\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    margin: auto;\n    background-color: rgba(0, 0, 0, 0.5);\n}\n.popup_inner {\n    position: absolute;\n    left: 25%;\n    right: 25%;\n    top: 25%;\n    bottom: 25%;\n    margin: auto;\n    border-radius: 20px;\n    background: white;\n}\n.mm {\n    background-color: darkblue;\n}\n.rmodal {\n    /* box-shadow: 0 2px 8px rgba(0, 0, 0.26); */\n    position: absolute;\n    /* top: 20vh; */\n    /* left: 27%; */\n}\n.fixed {\n    max-width: 39rem;\n    /* min-height: 33rem; */\n    background: rgb(73, 67, 2);\n    position: fixed;\n    top: 4vh;\n\n    color: white;\n}\n.rmodal_header {\n    padding: 1rem;\n    margin-right: 7px;\n    background-color: #876a01;\n    color: white;\n}\n\n@media (min-width: 535px) {\n    .rmodal {\n        width: 30rem;\n        left: calc((100%-50rem) / 2);\n    }\n}\n\n.modal {\n    width: 500px;\n    background: white;\n    border: 1px solid #ccc;\n    transition: 1.1s ease-out;\n    box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);\n    -webkit-filter: blur(0);\n            filter: blur(0);\n    transform: scale(1);\n    opacity: 1;\n    visibility: visible;\n}\n.modal.off {\n    opacity: 0;\n    visibility: hidden;\n    -webkit-filter: blur(8px);\n            filter: blur(8px);\n    transform: scale(0.33);\n    box-shadow: 1rem 0 0 rgba(0, 0, 0, 0.2);\n}\n\n/* Modal Content */\n.modal-content {\n    background-color: #fefefe;\n    margin: auto;\n    padding: 20px;\n    border: 1px solid #888;\n    width: 80%;\n}\n\n/* The Close Button */\n.close {\n    color: #aaaaaa;\n    float: right;\n    font-size: 28px;\n    font-weight: bold;\n}\n\n.close:hover,\n.close:focus {\n    color: #000;\n    text-decoration: none;\n    cursor: pointer;\n}\n.StripeElement {\n    height: 40px;\n    padding: 10px 12px;\n    width: 100%;\n    color: #32325d;\n    background-color: white;\n    border: 1px solid transparent;\n    border-radius: 4px;\n\n    box-shadow: 0 1px 3px 0 #e6ebf1;\n    transition: box-shadow 150ms ease;\n}\n\n.StripeElement--focus {\n    box-shadow: 0 1px 3px 0 #cfd7df;\n}\n\n.StripeElement--invalid {\n    border-color: #fa755a;\n}\n\n.StripeElement--webkit-autofill {\n    background-color: #fefde5 !important;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/modals/orderPh/index.css":
+/*!******************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/modals/orderPh/index.css ***!
+  \******************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "body {\n    margin: 0;\n    padding: 0;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\",\n        \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\",\n        \"Helvetica Neue\", sans-serif;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    box-sizing: border-box;\n}\n\n*,\n*:before,\n*:after {\n    box-sizing: inherit;\n}\n\n.App {\n    width: 90%;\n    max-width: 700px;\n    margin: 2em auto;\n}\np.lorem-text {\n    text-align: justify;\n}\n\n.modal-cover {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 10;\n    transform: translateZ(0);\n    background-color: rgba(0, 0, 0, 0.8);\n}\n\n.modal-area {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    padding: 2.5em 1.5em 1.5em 1.5em;\n    background-color: #ffffff;\n    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);\n    overflow-y: auto;\n    -webkit-overflow-scrolling: touch;\n}\n\n@media screen and (min-width: 500px) {\n    /* Center the Modal! */\n    .modal-area {\n        left: 50%;\n        top: 50%;\n        height: auto;\n        transform: translate(-50%, -50%);\n        max-width: 30em;\n        max-height: calc(100% - 1em);\n    }\n}\n\n._modal-close {\n    position: absolute;\n    top: 0;\n    right: 0;\n    padding: 0.5em;\n    line-height: 1;\n    background: #f6f6f7;\n    border: 0;\n    box-shadow: 0;\n    cursor: pointer;\n}\n\n._modal-close-icon {\n    width: 25px;\n    height: 25px;\n    fill: transparent;\n    stroke: black;\n    stroke-linecap: round;\n    stroke-width: 2;\n}\n\n.modal-body {\n    padding-top: 0.25em;\n}\n._hide-visual {\n    border: 0 !important;\n    clip: rect(0 0 0 0) !important;\n    height: 1px !important;\n    margin: -1px !important;\n    overflow: hidden !important;\n    padding: 0 !important;\n    position: absolute !important;\n    width: 1px !important;\n    white-space: nowrap !important;\n}\n\n.scroll-lock {\n    overflow: hidden;\n    margin-right: 17px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/others/index.css":
+/*!**********************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/others/index.css ***!
+  \**********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "body {\n    margin: 0;\n    padding: 0;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\",\n        \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\",\n        \"Helvetica Neue\", sans-serif;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    box-sizing: border-box;\n}\n\n*,\n*:before,\n*:after {\n    box-sizing: inherit;\n}\n\n.App {\n    width: 90%;\n    max-width: 700px;\n    margin: 2em auto;\n}\np.lorem-text {\n    text-align: justify;\n}\n\n.modal-cover {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 10;\n    transform: translateZ(0);\n    background-color: rgba(0, 0, 0, 0.8);\n}\n\n.modal-area {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    padding: 2.5em 1.5em 1.5em 1.5em;\n    background-color: #ffffff;\n    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);\n    overflow-y: auto;\n    -webkit-overflow-scrolling: touch;\n}\n\n@media screen and (min-width: 500px) {\n    /* Center the Modal! */\n    .modal-area {\n        left: 50%;\n        top: 50%;\n        height: auto;\n        transform: translate(-50%, -50%);\n        max-width: 30em;\n        max-height: calc(100% - 1em);\n    }\n}\n\n._modal-close {\n    position: absolute;\n    top: 0;\n    right: 0;\n    padding: 0.5em;\n    line-height: 1;\n    background: #f6f6f7;\n    border: 0;\n    box-shadow: 0;\n    cursor: pointer;\n}\n\n._modal-close-icon {\n    width: 25px;\n    height: 25px;\n    fill: transparent;\n    stroke: black;\n    stroke-linecap: round;\n    stroke-width: 2;\n}\n\n.modal-body {\n    padding-top: 0.25em;\n}\n._hide-visual {\n    border: 0 !important;\n    clip: rect(0 0 0 0) !important;\n    height: 1px !important;\n    margin: -1px !important;\n    overflow: hidden !important;\n    padding: 0 !important;\n    position: absolute !important;\n    width: 1px !important;\n    white-space: nowrap !important;\n}\n\n.scroll-lock {\n    overflow: hidden;\n    margin-right: 17px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/payment/cardSectionStyles.css":
+/*!***********************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/payment/cardSectionStyles.css ***!
+  \***********************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/**\n* Shows how you can use CSS to style your Element's container.\n* These classes are added to your Stripe Element by default.\n* You can override these classNames by using the options passed\n* to the CardElement component.\n* https://stripe.com/docs/js/elements_object/create_element?type=card#elements_create-options-classes\n*/\n\n.StripeElement {\n    height: 40px;\n    padding: 10px 12px;\n    width: 360px;\n    min-width: 100%;\n    /* width: 100%; */\n    color: #32325d;\n    background-color: white;\n    border: 1px solid transparent;\n    border-radius: 4px;\n\n    box-shadow: 0 1px 3px 0 #e6ebf1;\n    transition: box-shadow 150ms ease;\n}\n\n.StripeElement--focus {\n    box-shadow: 0 1px 3px 0 #cfd7df;\n}\n\n.StripeElement--invalid {\n    border-color: #fa755a;\n}\n\n.StripeElement--webkit-autofill {\n    background-color: #fefde5 !important;\n}\n", ""]);
 
 // exports
 
@@ -8020,6 +8089,551 @@ function toComment(sourceMap) {
 
 	return '/*# ' + data + ' */';
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/focus-trap-react/dist/focus-trap-react.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/focus-trap-react/dist/focus-trap-react.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+
+var PropTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var createFocusTrap = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js"); // TODO: These issues are related to older React features which we'll likely need
+//  to fix in order to move the code forward to the next major version of React.
+//  @see https://github.com/davidtheclark/focus-trap-react/issues/77
+
+/* eslint-disable react/no-find-dom-node */
+
+
+var FocusTrap = /*#__PURE__*/function (_React$Component) {
+  _inherits(FocusTrap, _React$Component);
+
+  var _super = _createSuper(FocusTrap);
+
+  function FocusTrap(props) {
+    var _this;
+
+    _classCallCheck(this, FocusTrap);
+
+    _this = _super.call(this, props);
+
+    _defineProperty(_assertThisInitialized(_this), "setFocusTrapElement", function (element) {
+      _this.focusTrapElement = element;
+    });
+
+    if (typeof document !== 'undefined') {
+      _this.previouslyFocusedElement = document.activeElement;
+    }
+
+    return _this;
+  }
+
+  _createClass(FocusTrap, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // We need to hijack the returnFocusOnDeactivate option,
+      // because React can move focus into the element before we arrived at
+      // this lifecycle hook (e.g. with autoFocus inputs). So the component
+      // captures the previouslyFocusedElement in componentWillMount,
+      // then (optionally) returns focus to it in componentWillUnmount.
+      var specifiedFocusTrapOptions = this.props.focusTrapOptions;
+      var tailoredFocusTrapOptions = {
+        returnFocusOnDeactivate: false
+      };
+
+      for (var optionName in specifiedFocusTrapOptions) {
+        if (!Object.prototype.hasOwnProperty.call(specifiedFocusTrapOptions, optionName)) {
+          continue;
+        }
+
+        if (optionName === 'returnFocusOnDeactivate') {
+          continue;
+        }
+
+        tailoredFocusTrapOptions[optionName] = specifiedFocusTrapOptions[optionName];
+      }
+
+      var focusTrapElementDOMNode = ReactDOM.findDOMNode(this.focusTrapElement); // eslint-disable-next-line react/prop-types -- _createFocusTrap is an internal prop
+
+      this.focusTrap = this.props._createFocusTrap(focusTrapElementDOMNode, tailoredFocusTrapOptions);
+
+      if (this.props.active) {
+        this.focusTrap.activate();
+      }
+
+      if (this.props.paused) {
+        this.focusTrap.pause();
+      }
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (prevProps.active && !this.props.active) {
+        var returnFocusOnDeactivate = this.props.focusTrapOptions.returnFocusOnDeactivate;
+        var returnFocus = returnFocusOnDeactivate || false;
+        var config = {
+          returnFocus: returnFocus
+        };
+        this.focusTrap.deactivate(config);
+      } else if (!prevProps.active && this.props.active) {
+        this.focusTrap.activate();
+      }
+
+      if (prevProps.paused && !this.props.paused) {
+        this.focusTrap.unpause();
+      } else if (!prevProps.paused && this.props.paused) {
+        this.focusTrap.pause();
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.focusTrap.deactivate();
+
+      if (this.props.focusTrapOptions.returnFocusOnDeactivate !== false && this.previouslyFocusedElement && this.previouslyFocusedElement.focus) {
+        this.previouslyFocusedElement.focus();
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var child = React.Children.only(this.props.children);
+
+      var composedRefCallback = function composedRefCallback(element) {
+        _this2.setFocusTrapElement(element);
+
+        if (typeof child.ref === 'function') {
+          child.ref(element);
+        } else if (child.ref) {
+          child.ref.current = element;
+        }
+      };
+
+      var childWithRef = React.cloneElement(child, {
+        ref: composedRefCallback
+      });
+      return childWithRef;
+    }
+  }]);
+
+  return FocusTrap;
+}(React.Component); // support server-side rendering where `Element` will not be defined
+
+
+var ElementType = typeof Element === 'undefined' ? Function : Element;
+FocusTrap.propTypes = {
+  active: PropTypes.bool,
+  paused: PropTypes.bool,
+  focusTrapOptions: PropTypes.shape({
+    onActivate: PropTypes.func,
+    onDeactivate: PropTypes.func,
+    initialFocus: PropTypes.oneOfType([PropTypes.instanceOf(ElementType), PropTypes.string, PropTypes.func]),
+    fallbackFocus: PropTypes.oneOfType([PropTypes.instanceOf(ElementType), PropTypes.string, PropTypes.func]),
+    escapeDeactivates: PropTypes.bool,
+    clickOutsideDeactivates: PropTypes.bool,
+    returnFocusOnDeactivate: PropTypes.bool,
+    setReturnFocus: PropTypes.oneOfType([PropTypes.instanceOf(ElementType), PropTypes.string, PropTypes.func]),
+    allowOutsideClick: PropTypes.func,
+    preventScroll: PropTypes.bool
+  }),
+  children: PropTypes.oneOfType([PropTypes.element, // React element
+  PropTypes.instanceOf(ElementType) // DOM element
+  ]) // NOTE: _createFocusTrap is internal, for testing purposes only, so we don't
+  //  specify it here. It's expected to be set to the function returned from
+  //  require('focus-trap'), or one with a compatible interface.
+
+};
+FocusTrap.defaultProps = {
+  active: true,
+  paused: false,
+  focusTrapOptions: {},
+  _createFocusTrap: createFocusTrap
+};
+module.exports = FocusTrap;
+
+/***/ }),
+
+/***/ "./node_modules/focus-trap/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/focus-trap/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var tabbable = __webpack_require__(/*! tabbable */ "./node_modules/tabbable/index.js");
+var xtend = __webpack_require__(/*! xtend */ "./node_modules/xtend/immutable.js");
+
+var activeFocusDelay;
+
+var activeFocusTraps = (function() {
+  var trapQueue = [];
+  return {
+    activateTrap: function(trap) {
+      if (trapQueue.length > 0) {
+        var activeTrap = trapQueue[trapQueue.length - 1];
+        if (activeTrap !== trap) {
+          activeTrap.pause();
+        }
+      }
+
+      var trapIndex = trapQueue.indexOf(trap);
+      if (trapIndex === -1) {
+        trapQueue.push(trap);
+      } else {
+        // move this existing trap to the front of the queue
+        trapQueue.splice(trapIndex, 1);
+        trapQueue.push(trap);
+      }
+    },
+
+    deactivateTrap: function(trap) {
+      var trapIndex = trapQueue.indexOf(trap);
+      if (trapIndex !== -1) {
+        trapQueue.splice(trapIndex, 1);
+      }
+
+      if (trapQueue.length > 0) {
+        trapQueue[trapQueue.length - 1].unpause();
+      }
+    }
+  };
+})();
+
+function focusTrap(element, userOptions) {
+  var doc = document;
+  var container =
+    typeof element === 'string' ? doc.querySelector(element) : element;
+
+  var config = xtend(
+    {
+      returnFocusOnDeactivate: true,
+      escapeDeactivates: true
+    },
+    userOptions
+  );
+
+  var state = {
+    firstTabbableNode: null,
+    lastTabbableNode: null,
+    nodeFocusedBeforeActivation: null,
+    mostRecentlyFocusedNode: null,
+    active: false,
+    paused: false
+  };
+
+  var trap = {
+    activate: activate,
+    deactivate: deactivate,
+    pause: pause,
+    unpause: unpause
+  };
+
+  return trap;
+
+  function activate(activateOptions) {
+    if (state.active) return;
+
+    updateTabbableNodes();
+
+    state.active = true;
+    state.paused = false;
+    state.nodeFocusedBeforeActivation = doc.activeElement;
+
+    var onActivate =
+      activateOptions && activateOptions.onActivate
+        ? activateOptions.onActivate
+        : config.onActivate;
+    if (onActivate) {
+      onActivate();
+    }
+
+    addListeners();
+    return trap;
+  }
+
+  function deactivate(deactivateOptions) {
+    if (!state.active) return;
+
+    clearTimeout(activeFocusDelay);
+
+    removeListeners();
+    state.active = false;
+    state.paused = false;
+
+    activeFocusTraps.deactivateTrap(trap);
+
+    var onDeactivate =
+      deactivateOptions && deactivateOptions.onDeactivate !== undefined
+        ? deactivateOptions.onDeactivate
+        : config.onDeactivate;
+    if (onDeactivate) {
+      onDeactivate();
+    }
+
+    var returnFocus =
+      deactivateOptions && deactivateOptions.returnFocus !== undefined
+        ? deactivateOptions.returnFocus
+        : config.returnFocusOnDeactivate;
+    if (returnFocus) {
+      delay(function() {
+        tryFocus(getReturnFocusNode(state.nodeFocusedBeforeActivation));
+      });
+    }
+
+    return trap;
+  }
+
+  function pause() {
+    if (state.paused || !state.active) return;
+    state.paused = true;
+    removeListeners();
+  }
+
+  function unpause() {
+    if (!state.paused || !state.active) return;
+    state.paused = false;
+    updateTabbableNodes();
+    addListeners();
+  }
+
+  function addListeners() {
+    if (!state.active) return;
+
+    // There can be only one listening focus trap at a time
+    activeFocusTraps.activateTrap(trap);
+
+    // Delay ensures that the focused element doesn't capture the event
+    // that caused the focus trap activation.
+    activeFocusDelay = delay(function() {
+      tryFocus(getInitialFocusNode());
+    });
+
+    doc.addEventListener('focusin', checkFocusIn, true);
+    doc.addEventListener('mousedown', checkPointerDown, {
+      capture: true,
+      passive: false
+    });
+    doc.addEventListener('touchstart', checkPointerDown, {
+      capture: true,
+      passive: false
+    });
+    doc.addEventListener('click', checkClick, {
+      capture: true,
+      passive: false
+    });
+    doc.addEventListener('keydown', checkKey, {
+      capture: true,
+      passive: false
+    });
+
+    return trap;
+  }
+
+  function removeListeners() {
+    if (!state.active) return;
+
+    doc.removeEventListener('focusin', checkFocusIn, true);
+    doc.removeEventListener('mousedown', checkPointerDown, true);
+    doc.removeEventListener('touchstart', checkPointerDown, true);
+    doc.removeEventListener('click', checkClick, true);
+    doc.removeEventListener('keydown', checkKey, true);
+
+    return trap;
+  }
+
+  function getNodeForOption(optionName) {
+    var optionValue = config[optionName];
+    var node = optionValue;
+    if (!optionValue) {
+      return null;
+    }
+    if (typeof optionValue === 'string') {
+      node = doc.querySelector(optionValue);
+      if (!node) {
+        throw new Error('`' + optionName + '` refers to no known node');
+      }
+    }
+    if (typeof optionValue === 'function') {
+      node = optionValue();
+      if (!node) {
+        throw new Error('`' + optionName + '` did not return a node');
+      }
+    }
+    return node;
+  }
+
+  function getInitialFocusNode() {
+    var node;
+    if (getNodeForOption('initialFocus') !== null) {
+      node = getNodeForOption('initialFocus');
+    } else if (container.contains(doc.activeElement)) {
+      node = doc.activeElement;
+    } else {
+      node = state.firstTabbableNode || getNodeForOption('fallbackFocus');
+    }
+
+    if (!node) {
+      throw new Error(
+        'Your focus-trap needs to have at least one focusable element'
+      );
+    }
+
+    return node;
+  }
+
+  function getReturnFocusNode(previousActiveElement) {
+    var node = getNodeForOption('setReturnFocus');
+    return node ? node : previousActiveElement;
+  }
+
+  // This needs to be done on mousedown and touchstart instead of click
+  // so that it precedes the focus event.
+  function checkPointerDown(e) {
+    if (container.contains(e.target)) return;
+    if (config.clickOutsideDeactivates) {
+      deactivate({
+        returnFocus: !tabbable.isFocusable(e.target)
+      });
+      return;
+    }
+    // This is needed for mobile devices.
+    // (If we'll only let `click` events through,
+    // then on mobile they will be blocked anyways if `touchstart` is blocked.)
+    if (config.allowOutsideClick && config.allowOutsideClick(e)) {
+      return;
+    }
+    e.preventDefault();
+  }
+
+  // In case focus escapes the trap for some strange reason, pull it back in.
+  function checkFocusIn(e) {
+    // In Firefox when you Tab out of an iframe the Document is briefly focused.
+    if (container.contains(e.target) || e.target instanceof Document) {
+      return;
+    }
+    e.stopImmediatePropagation();
+    tryFocus(state.mostRecentlyFocusedNode || getInitialFocusNode());
+  }
+
+  function checkKey(e) {
+    if (config.escapeDeactivates !== false && isEscapeEvent(e)) {
+      e.preventDefault();
+      deactivate();
+      return;
+    }
+    if (isTabEvent(e)) {
+      checkTab(e);
+      return;
+    }
+  }
+
+  // Hijack Tab events on the first and last focusable nodes of the trap,
+  // in order to prevent focus from escaping. If it escapes for even a
+  // moment it can end up scrolling the page and causing confusion so we
+  // kind of need to capture the action at the keydown phase.
+  function checkTab(e) {
+    updateTabbableNodes();
+    if (e.shiftKey && e.target === state.firstTabbableNode) {
+      e.preventDefault();
+      tryFocus(state.lastTabbableNode);
+      return;
+    }
+    if (!e.shiftKey && e.target === state.lastTabbableNode) {
+      e.preventDefault();
+      tryFocus(state.firstTabbableNode);
+      return;
+    }
+  }
+
+  function checkClick(e) {
+    if (config.clickOutsideDeactivates) return;
+    if (container.contains(e.target)) return;
+    if (config.allowOutsideClick && config.allowOutsideClick(e)) {
+      return;
+    }
+    e.preventDefault();
+    e.stopImmediatePropagation();
+  }
+
+  function updateTabbableNodes() {
+    var tabbableNodes = tabbable(container);
+    state.firstTabbableNode = tabbableNodes[0] || getInitialFocusNode();
+    state.lastTabbableNode =
+      tabbableNodes[tabbableNodes.length - 1] || getInitialFocusNode();
+  }
+
+  function tryFocus(node) {
+    if (node === doc.activeElement) return;
+    if (!node || !node.focus) {
+      tryFocus(getInitialFocusNode());
+      return;
+    }
+    node.focus();
+    state.mostRecentlyFocusedNode = node;
+    if (isSelectableInput(node)) {
+      node.select();
+    }
+  }
+}
+
+function isSelectableInput(node) {
+  return (
+    node.tagName &&
+    node.tagName.toLowerCase() === 'input' &&
+    typeof node.select === 'function'
+  );
+}
+
+function isEscapeEvent(e) {
+  return e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27;
+}
+
+function isTabEvent(e) {
+  return e.key === 'Tab' || e.keyCode === 9;
+}
+
+function delay(fn) {
+  return setTimeout(fn, 0);
+}
+
+module.exports = focusTrap;
 
 
 /***/ }),
@@ -69833,6 +70447,746 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunctionPrototype[toStringTagSymbol] =
+    GeneratorFunction.displayName = "GeneratorFunction";
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      prototype[method] = function(arg) {
+        return this._invoke(method, arg);
+      };
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      if (!(toStringTagSymbol in genFun)) {
+        genFun[toStringTagSymbol] = "GeneratorFunction";
+      }
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList),
+      PromiseImpl
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  Gp[toStringTagSymbol] = "Generator";
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   true ? module.exports : undefined
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  Function("r", "regeneratorRuntime = r")(runtime);
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/resolve-pathname/esm/resolve-pathname.js":
 /*!***************************************************************!*\
   !*** ./node_modules/resolve-pathname/esm/resolve-pathname.js ***!
@@ -71695,6 +73049,170 @@ module.exports = function (css) {
 
 /***/ }),
 
+/***/ "./node_modules/tabbable/index.js":
+/*!****************************************!*\
+  !*** ./node_modules/tabbable/index.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var candidateSelectors = [
+  'input',
+  'select',
+  'textarea',
+  'a[href]',
+  'button',
+  '[tabindex]',
+  'audio[controls]',
+  'video[controls]',
+  '[contenteditable]:not([contenteditable="false"])',
+];
+var candidateSelector = candidateSelectors.join(',');
+
+var matches = typeof Element === 'undefined'
+  ? function () {}
+  : Element.prototype.matches || Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+
+function tabbable(el, options) {
+  options = options || {};
+
+  var regularTabbables = [];
+  var orderedTabbables = [];
+
+  var candidates = el.querySelectorAll(candidateSelector);
+
+  if (options.includeContainer) {
+    if (matches.call(el, candidateSelector)) {
+      candidates = Array.prototype.slice.apply(candidates);
+      candidates.unshift(el);
+    }
+  }
+
+  var i, candidate, candidateTabindex;
+  for (i = 0; i < candidates.length; i++) {
+    candidate = candidates[i];
+
+    if (!isNodeMatchingSelectorTabbable(candidate)) continue;
+
+    candidateTabindex = getTabindex(candidate);
+    if (candidateTabindex === 0) {
+      regularTabbables.push(candidate);
+    } else {
+      orderedTabbables.push({
+        documentOrder: i,
+        tabIndex: candidateTabindex,
+        node: candidate,
+      });
+    }
+  }
+
+  var tabbableNodes = orderedTabbables
+    .sort(sortOrderedTabbables)
+    .map(function(a) { return a.node })
+    .concat(regularTabbables);
+
+  return tabbableNodes;
+}
+
+tabbable.isTabbable = isTabbable;
+tabbable.isFocusable = isFocusable;
+
+function isNodeMatchingSelectorTabbable(node) {
+  if (
+    !isNodeMatchingSelectorFocusable(node)
+    || isNonTabbableRadio(node)
+    || getTabindex(node) < 0
+  ) {
+    return false;
+  }
+  return true;
+}
+
+function isTabbable(node) {
+  if (!node) throw new Error('No node provided');
+  if (matches.call(node, candidateSelector) === false) return false;
+  return isNodeMatchingSelectorTabbable(node);
+}
+
+function isNodeMatchingSelectorFocusable(node) {
+  if (
+    node.disabled
+    || isHiddenInput(node)
+    || isHidden(node)
+  ) {
+    return false;
+  }
+  return true;
+}
+
+var focusableCandidateSelector = candidateSelectors.concat('iframe').join(',');
+function isFocusable(node) {
+  if (!node) throw new Error('No node provided');
+  if (matches.call(node, focusableCandidateSelector) === false) return false;
+  return isNodeMatchingSelectorFocusable(node);
+}
+
+function getTabindex(node) {
+  var tabindexAttr = parseInt(node.getAttribute('tabindex'), 10);
+  if (!isNaN(tabindexAttr)) return tabindexAttr;
+  // Browsers do not return `tabIndex` correctly for contentEditable nodes;
+  // so if they don't have a tabindex attribute specifically set, assume it's 0.
+  if (isContentEditable(node)) return 0;
+  return node.tabIndex;
+}
+
+function sortOrderedTabbables(a, b) {
+  return a.tabIndex === b.tabIndex ? a.documentOrder - b.documentOrder : a.tabIndex - b.tabIndex;
+}
+
+function isContentEditable(node) {
+  return node.contentEditable === 'true';
+}
+
+function isInput(node) {
+  return node.tagName === 'INPUT';
+}
+
+function isHiddenInput(node) {
+  return isInput(node) && node.type === 'hidden';
+}
+
+function isRadio(node) {
+  return isInput(node) && node.type === 'radio';
+}
+
+function isNonTabbableRadio(node) {
+  return isRadio(node) && !isTabbableRadio(node);
+}
+
+function getCheckedRadio(nodes) {
+  for (var i = 0; i < nodes.length; i++) {
+    if (nodes[i].checked) {
+      return nodes[i];
+    }
+  }
+}
+
+function isTabbableRadio(node) {
+  if (!node.name) return true;
+  // This won't account for the edge case where you have radio groups with the same
+  // in separate forms on the same page.
+  var radioSet = node.ownerDocument.querySelectorAll('input[type="radio"][name="' + node.name + '"]');
+  var checked = getCheckedRadio(radioSet);
+  return !checked || checked === node;
+}
+
+function isHidden(node) {
+  // offsetParent being null will allow detecting cases where an element is invisible or inside an invisible element,
+  // as long as the element does not use position: fixed. For them, their visibility has to be checked directly as well.
+  return node.offsetParent === null || getComputedStyle(node).visibility === 'hidden';
+}
+
+module.exports = tabbable;
+
+
+/***/ }),
+
 /***/ "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js":
 /*!****************************************************************!*\
   !*** ./node_modules/tiny-invariant/dist/tiny-invariant.esm.js ***!
@@ -71863,6 +73381,36 @@ module.exports = function(module) {
 	}
 	return module;
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/xtend/immutable.js":
+/*!*****************************************!*\
+  !*** ./node_modules/xtend/immutable.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = extend
+
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+function extend() {
+    var target = {}
+
+    for (var i = 0; i < arguments.length; i++) {
+        var source = arguments[i]
+
+        for (var key in source) {
+            if (hasOwnProperty.call(source, key)) {
+                target[key] = source[key]
+            }
+        }
+    }
+
+    return target
+}
 
 
 /***/ }),
@@ -72107,6 +73655,7 @@ var App = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_menu_menuOrder__WEBPACK_IMPORTED_MODULE_4__["default"], {
         shops: this.state.shops
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        exact: true,
         path: "/"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_shop_shops__WEBPACK_IMPORTED_MODULE_1__["default"], {
         data: this.state
@@ -73497,6 +75046,12 @@ var ExistMenu = /*#__PURE__*/function (_Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "testSms", function () {
+      axios.get("/sms/send").then(function (res) {
+        console.log("smsRRRRRR" + JSON.stringify(res));
+      });
+    });
+
     _this.state = {
       //shop: this.props.shop,
       menu: _this.props.menu,
@@ -73512,10 +75067,12 @@ var ExistMenu = /*#__PURE__*/function (_Component) {
       var _this2 = this;
 
       var menu = this.state.menu;
-      var modalOpen = this.props.modalOpen;
-      console.log("menu twsttttttttttttttttttt" + this.props.menu.find(function (el) {
-        return el.orderQty > 0;
-      }) == undefined);
+      var modalOpen = this.props.modalOpen; // console.log(
+      //     "menu twsttttttttttttttttttt" +
+      //         this.props.menu.find(el => el.orderQty > 0) ==
+      //         undefined
+      // );
+
       var styleMenu = modalOpen ? {
         backgroundColor: "#A9A9A9"
       } : null;
@@ -73538,8 +75095,12 @@ var ExistMenu = /*#__PURE__*/function (_Component) {
         confirmSelect: this.props.handleConfirmSelect
       })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
         className: "text-center"
-      }, "Menu"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-        className: "table table-bordeed"
+      }, "Menu", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.testSms
+      }, "send sms")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.props.handleSubmitFoodForm
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        className: "table table-bordered"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
         className: ""
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Rate"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Note"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Qty"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Price"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, this.state.cats.map(function (cat, ci) {
@@ -73618,7 +75179,7 @@ var ExistMenu = /*#__PURE__*/function (_Component) {
             }, "X")));
           }
         }));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tfoot", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Total:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.props.getTotal() ? this.props.getTotal().toFixed(2) : null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Please enter your delivery address"), !this.props.menu.find(function (el) {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tfoot", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Total:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.props.getTotal() ? this.props.getTotal().toFixed(2) : null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Please enter your delivery address"), !this.props.menu.find(function (el) {
         return el.orderQty > 0;
       }) ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.props.handleNextStep,
@@ -74033,9 +75594,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _existMenu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./existMenu */ "./resources/js/components/menu/existMenu.jsx");
 /* harmony import */ var _orders_checkout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../orders/checkout */ "./resources/js/components/orders/checkout.jsx");
-/* harmony import */ var _payment_cardDetail__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../payment/cardDetail */ "./resources/js/components/payment/cardDetail.jsx");
-/* harmony import */ var _payment_cardMinimal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../payment/cardMinimal */ "./resources/js/components/payment/cardMinimal.jsx");
+/* harmony import */ var _payment_card__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../payment/card */ "./resources/js/components/payment/card.jsx");
+/* harmony import */ var _orders_orderSuccess__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../orders/orderSuccess */ "./resources/js/components/orders/orderSuccess.jsx");
+/* harmony import */ var _orders_cashOrderConfirm__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../orders/cashOrderConfirm */ "./resources/js/components/orders/cashOrderConfirm.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
@@ -74082,12 +75648,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var MenuOrder = /*#__PURE__*/function (_Component) {
   _inherits(MenuOrder, _Component);
 
   var _super = _createSuper(MenuOrder);
 
   function MenuOrder(props) {
+    var _custData;
+
     var _this;
 
     _classCallCheck(this, MenuOrder);
@@ -74096,6 +75665,7 @@ var MenuOrder = /*#__PURE__*/function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "handleNextStep", function () {
       var step = _this.state.step;
+      console.log("stepppppppppppp" + step);
 
       _this.setState({
         step: step + 1
@@ -74168,7 +75738,19 @@ var MenuOrder = /*#__PURE__*/function (_Component) {
       var total = menu.reduce(function (total, a) {
         return total + a.subTotal;
       }, 0);
-      if (total) return total + Number(_this.state.deliPrice);
+      var deliPrice = _this.state.custData.deliPrice;
+
+      if (deliPrice === "max") {
+        deliPrice = 2.5;
+      }
+
+      if (total) {
+        if (_this.state.custData.isDeli) {
+          return total + Number(deliPrice);
+        } else {
+          return total;
+        }
+      }
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleCloseModal", function () {
@@ -74267,9 +75849,40 @@ var MenuOrder = /*#__PURE__*/function (_Component) {
       }
     });
 
+    _defineProperty(_assertThisInitialized(_this), "handleSubmitFoodForm", function () {
+      var checkMenu = [];
+
+      _this.state.menu.forEach(function (el) {
+        if (el.orderQty > 0) {
+          checkMenu.push(el);
+        }
+      });
+
+      axios.post("api/order/storeFood/" + _this.state.custData.orderTblString, checkMenu, {
+        baseURL: "/"
+      }).then(function (res) {
+        // console.log("food submit" + JSON.stringify(checkMenu));
+        // console.log("food submit" + JSON.stringify(res));
+        if (res.data === "storeFood success") {
+          _this.setState({
+            custData: _objectSpread(_objectSpread({}, _this.state.custData), {}, {
+              foodSubmited: true
+            })
+          });
+
+          _this.handleNextStep(); //this.props.handleNextStep();
+
+        }
+      });
+    });
+
     _defineProperty(_assertThisInitialized(_this), "handleCustAddr", function (e) {
+      var custData = _objectSpread({}, _this.state.custData);
+
+      custData.custAddr = e.target.value;
+
       _this.setState({
-        custAddr: e.target.value
+        custData: custData
       });
 
       setTimeout(function () {
@@ -74279,13 +75892,23 @@ var MenuOrder = /*#__PURE__*/function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "handlePhone", function (e) {
       _this.setState({
-        custPhone: e.target.value
+        custData: _objectSpread(_objectSpread({}, _this.state.custData), {}, {
+          custPhone: e.target.value
+        })
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleOrderMobile", function (e) {
+      _this.setState({
+        custData: _objectSpread(_objectSpread({}, _this.state.custData), {}, {
+          orderMobile: e.target.orderMobile.value
+        })
       });
     });
 
     _defineProperty(_assertThisInitialized(_this), "getDist", function () {
       var origin = _this.state.shop.addr;
-      var destination = _this.state.custAddr;
+      var destination = _this.state.custData.custAddr;
       var service = new google.maps.DistanceMatrixService();
       service.getDistanceMatrix({
         origins: [origin],
@@ -74301,23 +75924,26 @@ var MenuOrder = /*#__PURE__*/function (_Component) {
           // console.log("respoooppppp" + d + o);
           // console.log(
           //     "resppppppppppoooo" +
-          //         response.rows[0].elements[0].distance.text
+          //         (response.rows[0].elements[0].status ===
+          //             "NOT_FOUND")
           // );
-          console.log("resppppppppppoooo" + (response.rows[0].elements[0].status === "NOT_FOUND"));
-          console.log("resppppppppppoooo" + JSON.stringify(response));
+          // console.log("resppppppppppoooo" + JSON.stringify(response));
           var _status = response.rows[0].elements[0].status;
 
+          var custData = _objectSpread({}, _this.state.custData);
+
           if (_status === "NOT_FOUND" | "ZERO_RESULTS") {
-            _this.setState({
-              addrError: "NOT_FOUND"
-            });
+            custData.addrError = "NOT_FOUND";
+            custData.deliPrice = 2.5;
 
             _this.setState({
-              deliPrice: 2.5
+              custData: custData
             });
           } else if (_status == "OK") {
+            custData.addrError = "";
+
             _this.setState({
-              addrError: ""
+              custData: custData
             });
 
             var dist = response.rows[0].elements[0].distance.text;
@@ -74325,8 +75951,10 @@ var MenuOrder = /*#__PURE__*/function (_Component) {
             if (dist) {
               _this.getDeliPrice(dist);
             } else {
+              custData.deliPrice = 2.5;
+
               _this.setState({
-                deliPrice: 2.5
+                custData: custData
               });
             }
           } //return dist;
@@ -74356,21 +75984,46 @@ var MenuOrder = /*#__PURE__*/function (_Component) {
         deliPrice = deli.dist1;
       }
 
+      var custData = _objectSpread({}, _this.state.custData);
+
+      custData.deliPrice = deliPrice;
+
       _this.setState({
-        deliPrice: deliPrice
+        custData: custData
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "handleDeliCheck", function (event) {
+    _defineProperty(_assertThisInitialized(_this), "handleDeliCheck", function () {
+      var custData = _objectSpread({}, _this.state.custData);
+
+      custData.isDeli = !_this.state.custData.isDeli;
+
       _this.setState({
-        // deliPrice: event.target.value,
-        isDeli: !_this.state.isDeli
+        custData: custData
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "handlePayMethod", function (event) {
+    _defineProperty(_assertThisInitialized(_this), "handlePayMethod", function () {
       _this.setState({
-        cardPay: !_this.state.cardPay
+        custData: _objectSpread(_objectSpread({}, _this.state.custData), {}, {
+          cardPay: !_this.state.custData.cardPay
+        })
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleOrderMsg", function (e) {
+      _this.setState({
+        custData: _objectSpread(_objectSpread({}, _this.state.custData), {}, {
+          orderMsg: e.target.value
+        })
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCashConfirm", function () {
+      _this.setState({
+        custData: _objectSpread(_objectSpread({}, _this.state.custData), {}, {
+          cashConfirm: true
+        })
       });
     });
 
@@ -74378,6 +76031,7 @@ var MenuOrder = /*#__PURE__*/function (_Component) {
       return shop.id == _this.props.match.params.id;
     });
 
+    var orderTblString = shop.id + "_" + shop.shopName + shop.area + "_" + new Date().valueOf();
     _this.state = {
       step: 1,
       shop: shop,
@@ -74386,16 +76040,21 @@ var MenuOrder = /*#__PURE__*/function (_Component) {
       cats: [],
       frice: null,
       delivery: [],
-      deliPrice: "",
-      isDeli: true,
-      custAddr: "",
-      custPhone: "",
-      addrError: "",
+      // deliPrice: null,
+      // isDeli: true,
+      // custAddr: "",
+      // custPhone: "",
+      // addrError: "",
       modalOpen: false,
       //modalRadio: false,
       modalChecked: "",
       dist: "",
-      CardPay: true
+      // CardPay: true,
+      total: null,
+      custData: (_custData = {
+        deliPrice: null,
+        isDeli: true
+      }, _defineProperty(_custData, "deliPrice", null), _defineProperty(_custData, "custAddr", ""), _defineProperty(_custData, "custPhone", ""), _defineProperty(_custData, "orderMobile", ""), _defineProperty(_custData, "orderMsg", ""), _defineProperty(_custData, "addrError", ""), _defineProperty(_custData, "cardPay", true), _defineProperty(_custData, "total", null), _defineProperty(_custData, "orderTblString", orderTblString), _defineProperty(_custData, "cashConfirm", false), _defineProperty(_custData, "foodSubmited", false), _custData)
     };
     return _this;
   }
@@ -74405,18 +76064,19 @@ var MenuOrder = /*#__PURE__*/function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      // const shop1 = this.props.shops.find(
-      //     shop => shop.id == this.props.match.params.id
-      // );
-      // const str_tbl = this.props.match.params.id;
-      //console.log("stringtabhhhh" + JSON.stringify(shop1));
       var shop = this.state.shop;
-      var str_tbl = shop.shopName + shop.area + shop.id; //dilivery price should be passed in controller
-
-      axios.get("api/menu/show/".concat(str_tbl), {
+      var str_tbl = shop.shopName + shop.area + shop.id;
+      axios.all([axios.get("api/menu/show/".concat(str_tbl), {
         baseURL: "/"
-      }).then(function (res) {
-        var sData = res.data; //console.log("whyresgggggg" + JSON.stringify(res.data));
+      }), axios.get("api/delivery/show/".concat(shop.id), {
+        baseURL: "/"
+      })]).then(axios.spread(function () {
+        for (var _len = arguments.length, res = new Array(_len), _key = 0; _key < _len; _key++) {
+          res[_key] = arguments[_key];
+        }
+
+        var sData = res[0].data;
+        console.log("whyresgggggg" + JSON.stringify(res[0].data));
 
         if (sData.length != 0) {
           var menu = sData.data;
@@ -74440,15 +76100,17 @@ var MenuOrder = /*#__PURE__*/function (_Component) {
               });
             }
           }
-        }
-      }); // //Delivery
-      // axios
-      //     .get(`api/delivery/show/${this.state.shop.id}`, { baseURL: "/" })
-      //     .then(res => {
-      //         let dData = res.data;
-      //         console.log("whyresggggggdelivery" + JSON.stringify(res.data));
-      //         this.setState({ delivery: dDate });
-      //     });
+        } ///Delivery
+
+
+        var dData = res[1].data; // console.log(
+        //     "whyresggggggdelivery" + JSON.stringify(res.data)
+        // );
+
+        _this2.setState({
+          delivery: dData
+        });
+      }));
     }
   }, {
     key: "render",
@@ -74456,67 +76118,81 @@ var MenuOrder = /*#__PURE__*/function (_Component) {
       var _this3 = this;
 
       var _this$state = this.state,
+          shop = _this$state.shop,
           menu = _this$state.menu,
-          step = _this$state.step;
+          step = _this$state.step,
+          custData = _this$state.custData;
       var checkMenu = [];
       this.state.menu.forEach(function (el) {
         if (el.orderQty > 0) {
           checkMenu.push(el);
         }
       });
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, step === 1 && (menu.length != 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_existMenu__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        handleNextStep: this.handleNextStep //shop={this.state.shop}
+        ,
+        menu: menu,
+        cats: this.state.cats,
+        firce: this.state.frice,
+        modalOpen: this.state.modalOpen,
+        modalChecked: this.state.modalChecked,
+        handleOrder: this.handleOrder,
+        handleAdd: this.handleAdd,
+        handleDelete: this.handleDelete,
+        handleCloseModal: this.handleCloseModal,
+        handleConfirmSelect: function handleConfirmSelect(modalChecked) {
+          return _this3.handleConfirmSelect(modalChecked, _this3.state.modalOpen);
+        },
+        getTotal: this.getTotal,
+        getDeliPrice: this.getDeliPrice,
+        handleSubmitFoodForm: this.handleSubmitFoodForm
+      })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "This shop has no menu yet"))), step === 2 && checkMenu && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_orders_checkout__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        handleNextStep: this.handleNextStep,
+        handlePrevStep: this.handlePrevStep,
+        shop: shop,
+        menu: checkMenu,
+        cats: this.state.cats,
+        handleCustAddr: this.handleCustAddr,
+        handlePhone: this.handlePhone,
+        handleOrderMobile: this.handleOrderMobile // deliPrice={this.state.deliPrice}
+        //getDist={this.getDist}
+        ,
+        getTotal: this.getTotal,
+        isDeli: this.state.isDeli,
+        handleDeliCheck: this.handleDeliCheck,
+        getDeliPrice: this.getDeliPrice,
+        handlePayMethod: this.handlePayMethod,
+        handleOrderMsg: this.handleOrderMsg,
+        handleCashConfirm: this.handleCashConfirm // cardPay={this.state.cardPay}
+        ,
+        custData: this.state.custData,
+        handleSubmitFoodForm: this.handleSubmitFoodForm
+      })), step === 3 && (custData.cardPay ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_payment_card__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        handleNextStep: this.handleNextStep,
+        handlePrevStep: this.handlePrevStep,
+        handleSubmitFoodForm: this.handleSubmitFoodForm,
+        shopName: shop.shopName + "" + shop.area // menu={checkMenu}
+        // cats={this.state.cats}
+        ,
+        custAddr: this.state.custData.custAddr,
+        custPhone: this.state.custData.custPhone // addrError={this.state.addrError}
+        // handleCustAddr={this.handleCustAddr}
+        // handlePhone={this.handlePhone}
+        ,
+        deliPrice: this.state.custData.deliPrice //getDist={this.getDist}
+        ,
+        getTotal: this.getTotal,
+        orderTblString: this.state.custData.orderTblString // isDeli={this.state.isDeli}
+        // handleDeliCheck={this.handleDeliCheck}
+        // getDeliPrice={this.getDeliPrice}
+        // handlePayMethod={this.handlePayMethod}
+        // cardPay={this.state.cardPay}
 
-      switch (step) {
-        case 1:
-          if (menu.length == 0) {
-            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "This shop has no menu yet"));
-          } else return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_existMenu__WEBPACK_IMPORTED_MODULE_5__["default"], {
-            handleNextStep: this.handleNextStep //shop={this.state.shop}
-            ,
-            menu: menu,
-            cats: this.state.cats,
-            firce: this.state.frice,
-            modalOpen: this.state.modalOpen,
-            modalChecked: this.state.modalChecked,
-            handleOrder: this.handleOrder,
-            handleAdd: this.handleAdd,
-            handleDelete: this.handleDelete,
-            handleCloseModal: this.handleCloseModal,
-            handleConfirmSelect: function handleConfirmSelect(modalChecked) {
-              return _this3.handleConfirmSelect(modalChecked, _this3.state.modalOpen);
-            },
-            getTotal: this.getTotal,
-            getDeliPrice: this.getDeliPrice
-          }));
-
-          break;
-
-        case 2:
-          if (checkMenu) {
-            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_orders_checkout__WEBPACK_IMPORTED_MODULE_6__["default"], {
-              handleNextStep: this.handleNextStep,
-              handlePrevStep: this.handlePrevStep,
-              shop: this.state.shop,
-              menu: checkMenu,
-              cats: this.state.cats,
-              custAddr: this.state.custAddr,
-              custPhone: this.state.custPhone,
-              addrError: this.state.addrError,
-              handleCustAddr: this.handleCustAddr,
-              handlePhone: this.handlePhone,
-              deliPrice: this.state.deliPrice //getDist={this.getDist}
-              ,
-              getTotal: this.getTotal,
-              isDeli: this.state.isDeli,
-              handleDeliCheck: this.handleDeliCheck,
-              getDeliPrice: this.getDeliPrice,
-              handlePayMethod: this.handlePayMethod,
-              cardPay: this.state.cardPay
-            }));
-          }
-
-        case 3:
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_payment_cardMinimal__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_payment_cardDetail__WEBPACK_IMPORTED_MODULE_7__["default"], null));
-      }
+      })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_orders_cashOrderConfirm__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        handleNextStep: this.handleNextStep,
+        handleSubmitFoodForm: this.handleSubmitFoodForm,
+        custData: custData
+      })), step === 4 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_orders_orderSuccess__WEBPACK_IMPORTED_MODULE_8__["default"], null));
     }
   }]);
 
@@ -75063,6 +76739,253 @@ var MenuShow = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
+/***/ "./resources/js/components/modals/orderPh/form.jsx":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/modals/orderPh/form.jsx ***!
+  \*********************************************************/
+/*! exports provided: Form, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Form", function() { return Form; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var Form = function Form(_ref) {
+  var onSubmit = _ref.onSubmit,
+      custPhone = _ref.custPhone;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: onSubmit
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "To confirm the order, we will send a code to your moble phone. And you fill in this code on the top of the page.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "The phone number we will send to is ", custPhone, ".", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "orderMobile",
+    className: "text-primary"
+  }, "If it is different, please fill in here"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "orderMobile",
+    className: "form-control",
+    id: "orderMobile"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "form-control btn btn-primary",
+    type: "submit"
+  }, "Send me a code")));
+};
+/* harmony default export */ __webpack_exports__["default"] = (Form);
+
+/***/ }),
+
+/***/ "./resources/js/components/modals/orderPh/index.css":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/modals/orderPh/index.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./index.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/modals/orderPh/index.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/modals/orderPh/modal.jsx":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/modals/orderPh/modal.jsx ***!
+  \**********************************************************/
+/*! exports provided: Modal, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Modal", function() { return Modal; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./form */ "./resources/js/components/modals/orderPh/form.jsx");
+/* harmony import */ var focus_trap_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! focus-trap-react */ "./node_modules/focus-trap-react/dist/focus-trap-react.js");
+/* harmony import */ var focus_trap_react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(focus_trap_react__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+var Modal = function Modal(_ref) {
+  var onClickOutside = _ref.onClickOutside,
+      onKeyDown = _ref.onKeyDown,
+      modalRef = _ref.modalRef,
+      buttonRef = _ref.buttonRef,
+      closeModal = _ref.closeModal,
+      submitOrderPh = _ref.submitOrderPh,
+      custPhone = _ref.custPhone;
+  return /*#__PURE__*/react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.createPortal( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(focus_trap_react__WEBPACK_IMPORTED_MODULE_3___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("aside", {
+    tag: "aside",
+    role: "dialog",
+    tabIndex: "-1",
+    "aria-modal": "true",
+    className: "modal-cover",
+    onClick: onClickOutside,
+    onKeyDown: onKeyDown
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal-area",
+    ref: modalRef
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    ref: buttonRef,
+    "aria-label": "Close Modal",
+    "aria-labelledby": "close-modal",
+    className: "_modal-close",
+    onClick: closeModal
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    id: "close-modal",
+    className: "_hide-visual"
+  }, "Close"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    className: "_modal-close-icon",
+    viewBox: "0 0 40 40"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M 10,10 L 30,30 M 30,10 L 10,30"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal-body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+    onSubmit: submitOrderPh,
+    custPhone: custPhone
+  }))))), document.body);
+};
+/* harmony default export */ __webpack_exports__["default"] = (Modal);
+
+/***/ }),
+
+/***/ "./resources/js/components/orders/cashOrderConfirm.jsx":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/orders/cashOrderConfirm.jsx ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var CashOrderConfirm = /*#__PURE__*/function (_Component) {
+  _inherits(CashOrderConfirm, _Component);
+
+  var _super = _createSuper(CashOrderConfirm);
+
+  function CashOrderConfirm(props) {
+    var _this;
+
+    _classCallCheck(this, CashOrderConfirm);
+
+    _this = _super.call(this, props);
+
+    _defineProperty(_assertThisInitialized(_this), "handlePhonePwdChange", function (e) {
+      _this.setState({
+        phonePwd: e.target.value
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleSubmitPwd", function (e) {
+      e.preventDefault(e);
+      var data = {
+        phonePwd: _this.state.phonePwd
+      };
+      axios.post("api/order/matchPwd/" + _this.props.custData.orderTblString, data, {
+        baseURL: "/"
+      }).then(function (res) {
+        //console.log("pwddddddddd" + JSON.stringify(res));
+        if (res.data == "pwd matched") {
+          _this.props.handleSubmitFoodForm(); // if (this.props.custData.foodSubmited == true) {
+          //this.props.handleNextStep();
+          // this.props.handleNextStep();
+          // }
+
+        }
+      });
+    });
+
+    _this.state = {
+      phonePwd: null
+    };
+    return _this;
+  }
+
+  _createClass(CashOrderConfirm, [{
+    key: "render",
+    value: function render() {
+      // const { custData } = this.props;
+      // if (custData.cashConfirm)
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.props.handlePrevStep,
+        className: "btn btn-secondary"
+      }, "< ", "Back"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+        className: "text-center"
+      }, "Order Confirmation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmitPwd
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "pwd",
+        className: "text-primary"
+      }, "Confirm Code"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "form-control",
+        id: "pwd",
+        onChange: this.handlePhonePwdChange
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "submit" //onClick={this.handleSubmitPwd}
+        ,
+        className: "btn btn-primary float-right"
+      }, "Enter")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
+    }
+  }]);
+
+  return CashOrderConfirm;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (CashOrderConfirm);
+
+/***/ }),
+
 /***/ "./resources/js/components/orders/checkout.jsx":
 /*!*****************************************************!*\
   !*** ./resources/js/components/orders/checkout.jsx ***!
@@ -75078,6 +77001,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../css/style.css */ "./resources/css/style.css");
 /* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modals_orderPh_index_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modals/orderPh/index.css */ "./resources/js/components/modals/orderPh/index.css");
+/* harmony import */ var _modals_orderPh_index_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modals_orderPh_index_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modals_orderPh_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modals/orderPh/modal */ "./resources/js/components/modals/orderPh/modal.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -75108,6 +77034,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+ //import { Container } from "../modals/orderPh/Container";
+//import OrderPhModal from "../modals/orderPh/orderPhModal";
+
 var Checkout = /*#__PURE__*/function (_Component) {
   _inherits(Checkout, _Component);
 
@@ -75120,114 +77049,222 @@ var Checkout = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this, props);
 
-    _defineProperty(_assertThisInitialized(_this), "getTotal", function () {
-      var menu = _this.state.menu;
-      var total = menu.reduce(function (total, a) {
-        return total + a.subTotal;
-      }, 0);
-      if (total) return total + Number(_this.state.deliPrice);
-    });
+    _defineProperty(_assertThisInitialized(_this), "handleContinue", function (e) {
+      var cardPay = _this.props.custData.cardPay;
 
-    _defineProperty(_assertThisInitialized(_this), "handleContinue", function () {
-      var _this$state = _this.state,
-          isDeli = _this$state.isDeli,
-          cardPay = _this$state.cardPay; //submit form here
+      _this.handleSubmit(e);
 
       if (cardPay) {
         _this.props.handleNextStep();
+      } else {
+        _this.props.handleCashConfirm();
+
+        _this.setState({
+          modalOpen: true
+        });
+
+        _this.showModal(event);
       }
     });
 
-    _this.state = {
-      shop: _this.props.shop,
-      menu: _this.props.menu,
-      delivery: [],
-      deliPrice: "",
-      isDeli: true,
-      custPhone: "",
-      custAddr: "",
-      addrError: "",
-      dist: "",
-      cardPay: null
-    };
-    return _this;
-  } // componentDidMount() {
-  //     axios.get("/oauth/personal-access-tokens").then(response => {
-  //         console.log(response.data);
-  //     });
-  // }
-  // googleDis = () => {
-  //     var origin1 = new google.maps.LatLng(55.930385, -3.118425);
-  //     var origin2 = "Greenwich, England";
-  //     var destinationA = "Stockholm, Sweden";
-  //     var destinationB = new google.maps.LatLng(50.087692, 14.42115);
-  //     var service = new google.maps.DistanceMatrixService();
-  //     service.getDist(
-  //         {
-  //             origins: [origin1, origin2],
-  //             destinations: [destinationA, destinationB],
-  //             travelMode: "DRIVING",
-  //             unitSystem: google.maps.UnitSystem.METRIC,
-  //             avoidHighways: false,
-  //             avoidTolls: false
-  //         },
-  //         callback
-  //     );
-  //      function callback(response, status) {
-  //         if (status !== "OK") {
-  //             alert("Error was: " + status);
-  //         } else {
-  //             console.log("respppppp" + response);
-  //         }
-  //     }
-  // };
-  // googleTest = () => {
-  //     const origin = "10 walkinstown avenue, dublin 12";
-  //     const destination = "5 dame street,dublin 2";
-  //     const url =
-  //         "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" +
-  //         origin +
-  //         "&destination=" +
-  //         destination +
-  //         ":&key=AIzaSyBD6bth8x9c4ekzB3kBkAV288r1ir5PIwc";
-  //     axios.get(url).then(res => {
-  //         console.log("googlemm" + JSON.stringify(res));
-  //     });
-  // };
-  // handleModal = (e, i) => {
-  //     const { menu } = this.state;
-  //     menu[i].mainAttach = e.target.value;
-  //     this.setState({
-  //         menu
-  //     });
-  // };
+    _defineProperty(_assertThisInitialized(_this), "handleSubmit", function (event) {
+      event.preventDefault(); //console.log("srefpppppp" + JSON.stringify(this.props));
+      // const { fid, fname, price, note, cat } = this.state.inpVal;
+      // const data = {
+      //     cat: cat,
+      //     isMain: this.state.isMains,
+      //     fid: fid.val,
+      //     fname: fname.val,
+      //     price: price.val,
+      //     catNum: fname.catNum,
+      //     note: note.val,
+      //     frice: this.state.frice
+      // };
 
+      var data = _this.props.custData;
+      data.sum = _this.state.sum; //const { shop } = this.props;
+      //const tblString=this.props.custData.orderTblString;
 
-  _createClass(Checkout, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      //Delivery
-      axios.get("api/delivery/show/".concat(this.props.shop.id), {
+      axios //.post("api/menu/store/?shop_id=" + this.props.shopId, data, {})
+      .post("api/order/store/" + _this.props.custData.orderTblString, data, {
         baseURL: "/"
       }).then(function (res) {
-        var dData = res.data;
-        console.log("whyresggggggdelivery" + JSON.stringify(res.data));
+        // then print response status
+        console.log("check responnn" + res.data);
 
-        _this2.setState({
-          delivery: dData
-        });
+        if (res.data == "order success") {
+          console.log(res.statusText);
+          var cardPay = _this.props.custData.cardPay;
+
+          if (cardPay) {
+            _this.props.handleNextStep();
+          } else {
+            _this.props.handleCashConfirm();
+
+            _this.setState({
+              modalOpen: true
+            });
+
+            _this.showModal(event);
+          }
+        }
       });
-    }
-  }, {
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handlePhonePwdChange", function (e) {
+      _this.setState({
+        phonePwd: e.target.value
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleSubmitPwd", function (e) {
+      e.preventDefault(e);
+      var data = {
+        phonePwd: _this.state.phonePwd
+      };
+      axios.post("api/order/matchPwd/" + _this.props.custData.orderTblString, data, {
+        baseURL: "/"
+      }).then(function (res) {
+        //console.log("pwddddddddd" + JSON.stringify(res));
+        if (res.data == "pwd matched") {
+          _this.props.handleSubmitFoodForm(); // if (this.props.custData.foodSubmited == true) {
+          // this.props.handleNextStep();
+          // this.props.handleNextStep();
+          // }
+
+        }
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "submitOrderPh", function (event) {
+      event.preventDefault(event); //console.log("from modal" + event.target.orderMobile.value);
+
+      _this.props.handleOrderMobile(event); //send sms
+
+
+      var rand = Array(5).fill("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz").map(function (x) {
+        return x[Math.floor(Math.random() * x.length)];
+      }).join("");
+      var data = {};
+      var orderMobile = "";
+
+      if (event.target.orderMobile.value) {
+        orderMobile = event.target.orderMobile.value;
+      } else {
+        orderMobile = _this.props.custData.custPhone;
+      }
+
+      data.orderMobile = orderMobile;
+      data.orderPwd = rand;
+      data.pwdTimeStamp = new Date();
+
+      _this.custUpdate(data);
+
+      _this.setState({
+        cashConfirmed: true
+      });
+
+      _this.closeModal(event);
+
+      _this.props.handleNextStep();
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "custUpdate", function (data) {
+      event.preventDefault();
+      axios.post("api/order/update/" + _this.props.custData.orderTblString, data, {
+        baseURL: "/",
+        params: {
+          _method: "PUT"
+        }
+      }).then(function (res) {
+        // then print response status
+        console.log("update responnn" + res.data);
+
+        if (res.data == "order update success") {
+          console.log(res.statusText);
+        }
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "showModal", function () {
+      _this.setState({
+        modalOpen: true
+      } //     , () => {
+      //     this.closeButton.focus();
+      // }
+      );
+
+      _this.toggleScrollLock();
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "closeModal", function (event) {
+      event.preventDefault(event);
+
+      _this.setState({
+        modalOpen: false
+      }); // this.TriggerButton.focus();
+
+
+      _this.toggleScrollLock();
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onKeyDown", function (event) {
+      if (event.keyCode === 27) {
+        _this.closeModal();
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onClickOutside", function (event) {
+      if (_this.modal && _this.modal.contains(event.target)) return;
+
+      _this.closeModal();
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "toggleScrollLock", function () {
+      document.querySelector("html").classList.toggle("scroll-lock");
+    });
+
+    var sum = _this.props.menu.reduce(function (sum, a) {
+      return sum + a.subTotal;
+    }, 0);
+
+    _this.state = {
+      // isShown: false,
+      shop: _this.props.shop,
+      menu: _this.props.menu,
+      sum: sum,
+      modalOpen: false,
+      phonePwd: null // delivery: [],
+      // deliPrice: "",
+      // isDeli: true,
+      // custPhone: "",
+      // custAddr: "",
+      // addrError: "",
+      // dist: "",
+      // cardPay: null
+      //cashConfirmed:false
+
+    };
+    return _this;
+  }
+
+  _createClass(Checkout, [{
     key: "render",
+    // componentDidMount() {}
+    // getModalClass = () => {
+    //     let classes = "modal";
+    //     if (this.state.modalOpen) {
+    //         classes += "d-block";
+    //     }
+    //     return classes;
+    // };
     value: function render() {
-      var _this3 = this;
+      var _this2 = this;
 
       console.log("menu render state" + this.state.menu);
       var menu = this.state.menu;
-      var deliPrice = this.props.deliPrice;
+      var custData = this.props.custData;
+      var deliPrice = custData.deliPrice;
       var cats = [];
       menu.forEach(function (el) {
         cats[el.catNum] = el.cat;
@@ -75239,10 +77276,25 @@ var Checkout = /*#__PURE__*/function (_Component) {
         className: "menu"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
         className: "text-center"
-      }, "Checkout Page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "The food you have ordered is as below:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "distance==========", this.state.dist), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+      }, "Checkout Page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "The food you have ordered is as below:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.showModal
+      }, "show Modal"), this.state.modalOpen ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modals_orderPh_modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        submitOrderPh: this.submitOrderPh,
+        modalRef: function modalRef(n) {
+          return _this2.modal = n;
+        },
+        buttonRef: function buttonRef(n) {
+          return _this2.closeButton = n;
+        },
+        closeModal: this.closeModal,
+        onKeyDown: this.onKeyDown,
+        onClickOutside: this.onClickOutside,
+        custPhone: custData.custPhone,
+        handleOrderMobile: this.props.handleOrderMobile
+      }) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
         className: "text-center"
       }, "Menu"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-        className: "table table-bordeed"
+        className: "table table-bordered"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
         className: ""
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Rate"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Note"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Qty"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Price"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, cats.map(function (cat, ci) {
@@ -75255,7 +77307,7 @@ var Checkout = /*#__PURE__*/function (_Component) {
           id: "cat" + ci,
           name: "cat",
           className: ""
-        }, cat), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)), _this3.state.menu.map(function (food, index) {
+        }, cat), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)), _this2.state.menu.map(function (food, index) {
           //where catnum==1
           if (food.catNum === ci) {
             return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
@@ -75296,18 +77348,18 @@ var Checkout = /*#__PURE__*/function (_Component) {
             }, Math.round(food.subTotal * 100) / 100));
           }
         }));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tfoot", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Sum:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, menu.reduce(function (sum, a) {
-        return sum + a.subTotal;
-      }, 0)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tfoot", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Sum:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.state.sum), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "text-danger"
-      }, "Please provide the folloeing infomation to proceed."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Delivery", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Please provide the following infomation to proceed."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Delivery", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "checkbox",
         id: "deli",
         name: "deli",
         className: "ml-2" //value={this.getDeliPrice}
         ,
         value: true,
-        checked: this.props.isDeli == true,
+        checked: custData.isDeli == true,
         onChange: this.props.handleDeliCheck
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "ml-3"
@@ -75317,24 +77369,24 @@ var Checkout = /*#__PURE__*/function (_Component) {
         name: "deli",
         className: "ml-2",
         value: false,
-        checked: this.props.isDeli == false,
+        checked: custData.isDeli == false,
         onChange: this.props.handleDeliCheck
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), deliPrice == "max" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), deliPrice == "max" ? custData.isDeli && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "text-warning float-right"
-      }, "The delivery address might be too far to serve. Please contact the shop.") : deliPrice > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "The delivery address might be too far to serve. Please contact the shop.") : custData.isDeli && deliPrice > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "float-right"
       }, "Delivery Price: ", deliPrice), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Your contact number:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "custph",
         className: "ml-2",
-        value: this.props.custPhone,
+        value: custData.custPhone,
         onChange: this.props.handlePhone
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.props.isDeli ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Your delivery address:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), custData.isDeli ? custData.isDeli && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Your delivery address:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "ml-2",
-        value: this.props.custAddr,
+        value: custData.custAddr,
         onChange: this.props.handleCustAddr
-      })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, " ", ""), this.props.addrError == "NOT_FOUND" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, " ", ""), custData.isDeli && custData.addrError == "NOT_FOUND" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "text-danger float-right"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "We didn't find your address on google map . Make sure the food is deliverable !"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "And the delivery price may vary.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex "
@@ -75345,8 +77397,8 @@ var Checkout = /*#__PURE__*/function (_Component) {
         id: "card",
         name: "payMethod",
         className: "ml-2",
-        value: true,
-        checked: this.props.cardPay == true,
+        value: custData.cardPay,
+        checked: custData.cardPay == true,
         onChange: this.props.handlePayMethod
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "ml-4"
@@ -75355,14 +77407,27 @@ var Checkout = /*#__PURE__*/function (_Component) {
         id: "cash",
         name: "payMethod",
         className: "ml-2",
-        value: false,
-        checked: this.props.cardPay == false,
+        value: custData.cardPay,
+        checked: custData.cardPay == false,
         onChange: this.props.handlePayMethod
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "orderMsg",
+        className: "formGroup"
+      }, "In case you want to leave a message to the shop for your order, please type here.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        rows: "3",
+        cols: "50",
+        type: "textarea",
+        id: "msg",
+        name: "orderMsg",
+        className: "formControl",
+        value: custData.orderMsg,
+        onChange: this.props.handleOrderMsg
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.props.handlePrevStep,
         className: "btn btn-secondary"
       }, "< ", "Back"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.handleContinue,
+        type: "submit" //onClick={this.handleContinue}
+        ,
         className: "btn btn-primary float-right"
       }, "Continue")));
     }
@@ -75448,6 +77513,55 @@ var Order = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
+/***/ "./resources/js/components/orders/orderSuccess.jsx":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/orders/orderSuccess.jsx ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return OrderSuccess; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function OrderSuccess(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "order success");
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/others/index.css":
+/*!**************************************************!*\
+  !*** ./resources/js/components/others/index.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./index.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/others/index.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/others/modal.jsx":
 /*!**************************************************!*\
   !*** ./resources/js/components/others/modal.jsx ***!
@@ -75462,6 +77576,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css/style.css */ "./resources/css/style.css");
 /* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.css */ "./resources/js/components/others/index.css");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_2__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -75473,6 +77589,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -75541,9 +77658,89 @@ function Modal(props) {
 
 /***/ }),
 
-/***/ "./resources/js/components/payment/cardDetail.jsx":
+/***/ "./resources/js/components/payment/card.jsx":
+/*!**************************************************!*\
+  !*** ./resources/js/components/payment/card.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Card; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @stripe/react-stripe-js */ "./node_modules/@stripe/react-stripe-js/dist/react-stripe.umd.js");
+/* harmony import */ var _stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _stripe_stripe_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @stripe/stripe-js */ "./node_modules/@stripe/stripe-js/dist/stripe.esm.js");
+/* harmony import */ var _checkoutForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./checkoutForm */ "./resources/js/components/payment/checkoutForm.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+ // Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+// const stripePromise = loadStripe(
+//     "pk_test_51GuqPBLx5fJpovNG2twYeFlvOXiLvK9qq8jLsqtRHt6cShmWDjFJB9Q0WsoDkGgSGtLDwVgtSupt7rtQ0yDyxzge00nlKJLCYM"
+// );
+
+function Card(props) {
+  // ComponentDidMount=()=>{
+  //     var response = fetch('/secret').then(function(response) {
+  //         return response.json();
+  //       }).then(function(responseJson) {
+  //         var clientSecret = responseJson.client_secret;
+  //         // Call stripe.confirmCardPayment() with the client secret.
+  //       });
+  // }
+  // handleSubmit(){
+  //     // Call stripe.confirmCardPayment() with the client secret.
+  // }
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(),
+      _useState2 = _slicedToArray(_useState, 2),
+      paymentIntent = _useState2[0],
+      setPaymentIntent = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    axios.get("api/stripe/intent/" + props.orderTblString, {
+      baseURL: "/"
+    }).then(function (res) {
+      console.log("cardddddddddd" + JSON.stringify(res));
+      setPaymentIntent(res.data);
+    });
+  }, []);
+  var stripePromise = Object(_stripe_stripe_js__WEBPACK_IMPORTED_MODULE_3__["loadStripe"])("pk_test_51GuqPBLx5fJpovNG2twYeFlvOXiLvK9qq8jLsqtRHt6cShmWDjFJB9Q0WsoDkGgSGtLDwVgtSupt7rtQ0yDyxzge00nlKJLCYM");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "App"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, " Total amount to pay: ", props.getTotal().toFixed(2), "Euro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__["Elements"], {
+    stripe: stripePromise
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_checkoutForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    paymentIntent: paymentIntent,
+    handleNextStep: props.handleNextStep,
+    handlePrevStep: props.handlePrevStep,
+    handleSubmitFoodForm: props.handleSubmitFoodForm
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/payment/cardSection.js":
 /*!********************************************************!*\
-  !*** ./resources/js/components/payment/cardDetail.jsx ***!
+  !*** ./resources/js/components/payment/cardSection.js ***!
   \********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -75552,92 +77749,194 @@ function Modal(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+/* harmony import */ var _stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @stripe/react-stripe-js */ "./node_modules/@stripe/react-stripe-js/dist/react-stripe.umd.js");
+/* harmony import */ var _stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _cardSectionStyles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cardSectionStyles.css */ "./resources/js/components/payment/cardSectionStyles.css");
+/* harmony import */ var _cardSectionStyles_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_cardSectionStyles_css__WEBPACK_IMPORTED_MODULE_2__);
 
 
+ //import "./stripeApp.css";
 
-var CardDetail = /*#__PURE__*/function (_React$Component) {
-  _inherits(CardDetail, _React$Component);
-
-  var _super = _createSuper(CardDetail);
-
-  function CardDetail() {
-    var _this;
-
-    _classCallCheck(this, CardDetail);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
+var CARD_ELEMENT_OPTIONS = {
+  style: {
+    base: {
+      color: "#32325d",
+      fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+      fontSmoothing: "antialiased",
+      fontSize: "16px",
+      "::placeholder": {
+        color: "#aab7c4"
+      }
+    },
+    invalid: {
+      color: "#fa755a",
+      iconColor: "#fa755a"
     }
-
-    _this = _super.call.apply(_super, [this].concat(args));
-
-    _defineProperty(_assertThisInitialized(_this), "state", {});
-
-    return _this;
   }
+};
 
-  _createClass(CardDetail, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Card det");
-    }
-  }]);
+function CardSection() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Card details", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_1__["CardElement"], {
+    options: CARD_ELEMENT_OPTIONS
+  }));
+}
 
-  return CardDetail;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (CardDetail);
+/* harmony default export */ __webpack_exports__["default"] = (CardSection);
 
 /***/ }),
 
-/***/ "./resources/js/components/payment/cardMinimal.jsx":
+/***/ "./resources/js/components/payment/cardSectionStyles.css":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/payment/cardSectionStyles.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./cardSectionStyles.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/payment/cardSectionStyles.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/payment/checkoutForm.js":
 /*!*********************************************************!*\
-  !*** ./resources/js/components/payment/cardMinimal.jsx ***!
+  !*** ./resources/js/components/payment/checkoutForm.js ***!
   \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CardMinimal; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @stripe/react-stripe-js */ "./node_modules/@stripe/react-stripe-js/dist/react-stripe.umd.js");
-/* harmony import */ var _stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _stripe_stripe_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @stripe/stripe-js */ "./node_modules/@stripe/stripe-js/dist/stripe.esm.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CheckoutForm; });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @stripe/react-stripe-js */ "./node_modules/@stripe/react-stripe-js/dist/react-stripe.umd.js");
+/* harmony import */ var _stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _cardSection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./cardSection */ "./resources/js/components/payment/cardSection.js");
 
 
- // Make sure to call `loadStripe` outside of a component’s render to avoid
-// recreating the `Stripe` object on every render.
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
-var stripePromise = Object(_stripe_stripe_js__WEBPACK_IMPORTED_MODULE_2__["loadStripe"])("pk_test_JJ1eMdKN0Hp4UFJ6kWXWO4ix00jtXzq5XG");
-function CardMinimal() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_1__["Elements"], {
-    stripe: stripePromise
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MyCheckoutForm, null));
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+function CheckoutForm(props) {
+  var stripe = Object(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__["useStripe"])();
+  var elements = Object(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__["useElements"])();
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(),
+      _useState2 = _slicedToArray(_useState, 2),
+      errorMsg = _useState2[0],
+      setErrorMsg = _useState2[1];
+
+  var handleSubmit = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(event) {
+      var result;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              // We don't want to let default form submission happen here,
+              // which would refresh the page.
+              event.preventDefault();
+
+              if (!(!stripe || !elements)) {
+                _context.next = 3;
+                break;
+              }
+
+              return _context.abrupt("return");
+
+            case 3:
+              _context.next = 5;
+              return stripe.confirmCardPayment("".concat(props.paymentIntent.clientSecret), {
+                payment_method: {
+                  card: elements.getElement(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__["CardElement"]),
+                  billing_details: {
+                    name: "Jenny Rosen"
+                  }
+                }
+              });
+
+            case 5:
+              result = _context.sent;
+
+              if (result.error) {
+                // Show error to your customer (e.g., insufficient funds)
+                setErrorMsg(result.error.message);
+              } else {
+                // The payment has been processed!
+                if (result.paymentIntent.status === "succeeded") {
+                  // Show a success message to your customer
+                  // There's a risk of the customer closing the window before callback
+                  // execution. Set up a webhook or plugin to listen for the
+                  // payment_intent.succeeded event that handles any business critical
+                  // post-payment actions.
+                  console.log("paid resultttt" + result);
+                  props.handleSubmitFoodForm(); //props.handleNextStep();
+                }
+              }
+
+            case 7:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function handleSubmit(_x) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "text-danger"
+  }, errorMsg), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
+    onSubmit: handleSubmit
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_cardSection__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    className: "btn btn-primary ml-7",
+    disabled: !stripe
+  }, "Pay now")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    onClick: props.handlePrevStep,
+    className: "btn btn-secondary"
+  }, "< ", "Back"));
 }
 
 /***/ }),

@@ -42,4 +42,38 @@ class CreateTbl extends Model
                 }
         }
     }
+    public function create_orderFoodTbl($tblName){
+        
+       
+        //$shops = App\User::find(1)->shops;
+        //$shops =App\Shop::all();
+        //::find(1)->shops;
+        
+        
+        
+            // $sid=$shop->id;
+            // $sname=$shop->name;
+            // $sarea=$shop->area;
+            
+            
+            
+                if (!Schema::hasTable($tblName)){
+                    
+                    Schema::create($tblName, function($table)
+                    {
+                        $table->id();
+                        $table->string('fid');
+                        $table->string('fname');
+                        $table->string('main_attach')->nullable;
+                        $table->unsignedSmallInteger('qty');
+                        $table->unsignedDecimal('price', 5, 2);
+                        // $table->string('cat',20);
+                        // $table->smallInteger('catNum');
+                        // $table->string('note',120)->nullable();
+                        // $table->boolean('isMain');
+                        $table->timestamps();
+                    });
+                }
+        
+    }
 }

@@ -10,6 +10,9 @@ use App\User;
 
 use Illuminate\Support\Facades\Auth;
 use App\Order;
+use App\OrderMenu;
+use App\CreateTbl;
+use Carbon\Carbon;
 
 class OrderController extends Controller
 {
@@ -39,9 +42,110 @@ class OrderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeFood(Request $request,$tbl_string)
+    {//return "storeFood1 success".$request->input('0.fname');
+        $data=$request->input();
+        foreach($data as $food){
+            if($food['fname']){
+                $orderFood=new OrderMenu();
+                $tbl_name="order_".$tbl_string;
+                $orderFood->setTable($tbl_name);
+                $orderFood->fid=$food['fid'];
+                $orderFood->fname=$food['fname'];
+                $orderFood->price=$food['subTotal'];
+                $orderFood->qty=$food['orderQty'];
+                // $orderFood->catNum=$index;
+                // $orderFood->cat=$cat[$index];
+                
+                // $orderFood->isMain=$isMain[$index];
+                $attach='';
+                foreach($food['mainAttach'] as $mainAttach){
+                    if(isset($mainAttach)){
+                        $attach=$attach.$mainAttach;
+                    }
+                }
+                $orderFood->main_attach=$attach;
+                $orderFood->save();
+                
+            }
+            
+        }
+        return "storeFood success";
+    // if($data[0].fname){  
+    //     // if($request->has('fname')){
+    //         return "storeFood1 success".$request->input('0.fname');
+    //     //$cat=$request->cat;
+    //     //return "here in contrller";
+    //     $fid=$request->fid;
+    //     $fname=$request->fname;
+    //     $price=$request->price;
+        
+    //     $note=$request->note;
+    //     $qty=$request->qty;
+        
+    //     // $isMain=$request->isMain;
+    //    }
+        
+    //    if(isset($fname)){
+    //        for($i=0;$i<sizeof($fname);$i++){
+    //         if(isset($fname[$i])){
+    //             $orderFood=new OrderMenu();
+    //             $tbl_name="order_".$tbl_string;
+    //             $orderFood->setTable($tbl_name);
+                
+    //             $orderFood->fid=$fid[$i];
+    //             $orderFood->fname=$fname[$i];
+    //             $orderFood->price=$price[$i];
+    //             $orderFood->qty=$qty[$i];
+    //             // $orderFood->catNum=$index;
+    //             // $orderFood->cat=$cat[$index];
+                
+    //             // $orderFood->isMain=$isMain[$index];
+    //             if(isset($note[$i])){
+    //                 $orderFood->note=$note[$i];
+    //             }
+                
+
+    //             $orderFood->save();
+    
+            
+        
+        
+    
+    }
+    public function store(Request $request,$tbl_string)
     {
-        //
+        
+        //validation goes here
+    //    if($request->has('fname')){        
+    //     $cat=$request->cat;
+    $order=new Order();
+    //$order->shop_id=$request->shop_id;
+    $deliPrice=$request->deliPrice;
+     if($deliPrice=="max"){$deliPrice=5;}
+    $order->paidAmt=0;
+    $order->amtToPay=$request->sum+$deliPrice;
+    $order->cname=$request->cname;
+     $order->deliAddr=$request->custAddr;
+     $order->contactPhone=$request->custPhone;
+    
+     //$order->order_mobl=$request->orderMobile;
+     $order->email="";
+     $order->cardPay=$request->cardPay;
+     $order->order_msg=$request->orderMsg;
+     $order->deliPrice=$deliPrice;
+     $order->delivery=$request->isDeli;
+     //$order->orderRef=$request->orderRef;
+     $tblName="order_".$tbl_string;
+     $order->orderFoodTbl=$tblName;
+     
+     $order->isComplete=0;
+     $order->cilentRes=0;
+     $order->save();
+        $createTbl=new CreateTbl();
+        $createTbl->create_orderFoodTbl($tblName);
+            
+        return "order success";
     }
 
     /**
@@ -50,6 +154,18 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function matchPwd(Request $request,$tbl_string)
+    {
+        
+      
+        $tblName="order_".$tbl_string;
+        
+        $order= Order::where('orderFoodTbl',$tblName)->first();
+    
+        if($request->has("phonePwd")){
+            if($order->order_pwd===$request->phonePwd)
+            return "pwd matched";}
+    }
     public function show()
     {
 
@@ -92,9 +208,39 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $tbl_string)
     {
-        //
+        
+        $tblName="order_".$tbl_string;
+        
+        $order= Order::where('orderFoodTbl',$tblName)->first();
+    //  if($deliPrice=="max"){$deliPrice=5;}
+    // $order->paidAmt=0;
+    // $order->amtToPay=$request->sum+$deliPrice;
+    // $order->cname=$request->cname;
+    //  $order->deliAddr=$request->custAddr;
+    //  $order->contactPhone=$request->custPhone;
+    if($request->has("orderMobile")){
+    $order->order_mobl=$request->orderMobile;}
+    if($request->has("orderPwd")){
+        $order->order_pwd=$request->orderPwd;
+        $order->pwd_created = \Carbon::now();}
+    //  $order->email="";
+    //  $order->cardPay=$request->cardPay;
+     
+    //  $order->deliPrice=$deliPrice;
+    //  $order->delivery=$request->isDeli;
+    //  //$order->orderRef=$request->orderRef;
+    //  $tblName="order_".$tbl_string;
+    //  $order->orderFoodTbl=$tblName;
+     
+    //  $order->isComplete=0;
+    //  $order->cilentRes=0;
+     $order->save();
+        // $createTbl=new CreateTbl();
+        // $createTbl->create_orderFoodTbl($tblName);
+            
+        return "order update success";
     }
 
     /**

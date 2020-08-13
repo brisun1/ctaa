@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::get('/dashBoard', 'DashBoardController@index')->name('dashBoard');
+Route::get('/help', 'HelpController@contact')->name('help');
+Route::post('/email', 'HelpController@email')->name('email');
 Route::get('/{path?}', [
     'uses' => 'ReactController@show',
     'as' => 'react',
@@ -37,3 +39,7 @@ Auth::routes();
 Route::get('/map', function () {
     return view('mapTest');
 });
+Route::get('/help', function () {
+    return view('help');
+});
+// Route::get('/help', 'HelpController@contact')->name('help');

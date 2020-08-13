@@ -29,5 +29,12 @@ Route::get('menu/show/{str_tbl}','Api\MenuController@show');
 Route::post('menu/update/{str_tbl}','Api\MenuController@update')->middleware('auth:api');
 //order route
 Route::get('order/show','Api\OrderController@show');
+Route::post('order/store/{str_tbl}','Api\OrderController@store');
+Route::post('order/storeFood/{str_tbl}','Api\OrderController@storeFood');
+Route::put('order/update/{str_tbl}','Api\OrderController@update');
+Route::post('order/matchPwd/{str_tbl}','Api\OrderController@matchPwd');
 Route::post('delivery/store/{str_tbl}','Api\DeliveryController@store')->middleware('auth:api');
 Route::get('delivery/show/{shop_id}','Api\DeliveryController@show');
+//stripe
+Route::get('stripe/intent/{orderTblString}','Api\StripeController@create_pay_intent');
+Route::get('sms/send','Api\SmsController@send');

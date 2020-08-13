@@ -23,15 +23,19 @@ class ExistMenu extends Component {
             isDeli: !this.state.isDeli
         });
     };
-
+    testSms = () => {
+        axios.get("/sms/send").then(res => {
+            console.log("smsRRRRRR" + JSON.stringify(res));
+        });
+    };
     render() {
         const { menu } = this.state;
         const { modalOpen } = this.props;
-        console.log(
-            "menu twsttttttttttttttttttt" +
-                this.props.menu.find(el => el.orderQty > 0) ==
-                undefined
-        );
+        // console.log(
+        //     "menu twsttttttttttttttttttt" +
+        //         this.props.menu.find(el => el.orderQty > 0) ==
+        //         undefined
+        // );
         const styleMenu = modalOpen ? { backgroundColor: "#A9A9A9" } : null;
         const styleBtn = modalOpen ? { opacity: 0.4 } : null;
         if (menu.length == 0) {
@@ -66,296 +70,291 @@ class ExistMenu extends Component {
                             />
                         </div>
                     ) : null}
-                    <h6 className="text-center">Menu</h6>
+                    <h6 className="text-center">
+                        Menu<button onClick={this.testSms}>send sms</button>
+                    </h6>
+                    <form onSubmit={this.props.handleSubmitFoodForm}>
+                        <table className="table table-bordered">
+                            <thead>
+                                <tr className="">
+                                    <td></td>
+                                    <td>Name</td>
+                                    <td>Rate</td>
+                                    <td>Note</td>
+                                    <td>Qty</td>
+                                    <td>Price</td>
 
-                    <table className="table table-bordeed">
-                        <thead>
-                            <tr className="">
-                                <td></td>
-                                <td>Name</td>
-                                <td>Rate</td>
-                                <td>Note</td>
-                                <td>Qty</td>
-                                <td>Price</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {this.state.cats.map((cat, ci) => {
+                                    return (
+                                        <Fragment key={"divk" + ci}>
+                                            <tr className="">
+                                                <td></td>
+                                                <td></td>
+                                                <td
+                                                    key={"c" + ci}
+                                                    id={"cat" + ci}
+                                                    name="cat"
+                                                    className=""
+                                                >
+                                                    {cat}
+                                                </td>
+                                                <td></td>
+                                            </tr>
 
-                                <td></td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.state.cats.map((cat, ci) => {
-                                return (
-                                    <Fragment key={"divk" + ci}>
-                                        <tr className="">
-                                            <td></td>
-                                            <td></td>
-                                            <td
-                                                key={"c" + ci}
-                                                id={"cat" + ci}
-                                                name="cat"
-                                                className=""
-                                            >
-                                                {cat}
-                                            </td>
-                                            <td></td>
-                                        </tr>
+                                            {menu.map((food, index) => {
+                                                //where catnum==1
 
-                                        {menu.map((food, index) => {
-                                            //where catnum==1
-
-                                            if (food.catNum === ci) {
-                                                return (
-                                                    <tr
-                                                        key={
-                                                            "key" +
-                                                            ci +
-                                                            "-" +
-                                                            index
-                                                        }
-                                                        id={
-                                                            "row" +
-                                                            ci +
-                                                            "--" +
-                                                            index
-                                                        }
-                                                        className={
-                                                            food.orderQty > 0
-                                                                ? "bg-info"
-                                                                : ""
-                                                        }
-                                                    >
-                                                        <td
+                                                if (food.catNum === ci) {
+                                                    return (
+                                                        <tr
                                                             key={
-                                                                "fid" +
+                                                                "key" +
                                                                 ci +
-                                                                "" +
+                                                                "-" +
                                                                 index
                                                             }
                                                             id={
-                                                                "fid" +
+                                                                "row" +
                                                                 ci +
-                                                                "0" +
+                                                                "--" +
                                                                 index
                                                             }
-                                                            name="fid"
+                                                            className={
+                                                                food.orderQty >
+                                                                0
+                                                                    ? "bg-info"
+                                                                    : ""
+                                                            }
                                                         >
-                                                            {food.fid}
-                                                        </td>
-                                                        <td
-                                                            key={
-                                                                "fn" +
-                                                                ci +
-                                                                "" +
-                                                                index
-                                                            }
-                                                            id={
-                                                                "fn" +
-                                                                ci +
-                                                                "0" +
-                                                                index
-                                                            }
-                                                            name="fname"
-                                                            className=""
-                                                        >
-                                                            {food.fname}
+                                                            <td
+                                                                key={
+                                                                    "fid" +
+                                                                    ci +
+                                                                    "" +
+                                                                    index
+                                                                }
+                                                                id={
+                                                                    "fid" +
+                                                                    ci +
+                                                                    "0" +
+                                                                    index
+                                                                }
+                                                                name="fid"
+                                                            >
+                                                                {food.fid}
+                                                            </td>
+                                                            <td
+                                                                key={
+                                                                    "fn" +
+                                                                    ci +
+                                                                    "" +
+                                                                    index
+                                                                }
+                                                                id={
+                                                                    "fn" +
+                                                                    ci +
+                                                                    "0" +
+                                                                    index
+                                                                }
+                                                                name="fname"
+                                                                className=""
+                                                            >
+                                                                {food.fname}
 
-                                                            {food.isMain ? (
-                                                                <span className="ml-2 text-danger font-italic">
-                                                                    {
-                                                                        food.mainAttach
+                                                                {food.isMain ? (
+                                                                    <span className="ml-2 text-danger font-italic">
+                                                                        {
+                                                                            food.mainAttach
+                                                                        }
+                                                                    </span>
+                                                                ) : null}
+                                                            </td>
+                                                            <td
+                                                                key={
+                                                                    "price" +
+                                                                    ci +
+                                                                    "" +
+                                                                    index
+                                                                }
+                                                                id={
+                                                                    "price" +
+                                                                    ci +
+                                                                    "0" +
+                                                                    index
+                                                                }
+                                                                name="price"
+                                                                className=""
+                                                            >
+                                                                {food.price}
+                                                            </td>
+                                                            <td
+                                                                key={
+                                                                    "note" +
+                                                                    ci +
+                                                                    "" +
+                                                                    index
+                                                                }
+                                                                id={
+                                                                    "note" +
+                                                                    ci +
+                                                                    "0" +
+                                                                    index
+                                                                }
+                                                                name="note"
+                                                                className=""
+                                                            >
+                                                                {food.note}
+                                                            </td>
+                                                            <td
+                                                                key={
+                                                                    "qty" +
+                                                                    ci +
+                                                                    "" +
+                                                                    index
+                                                                }
+                                                                id={
+                                                                    "qty" +
+                                                                    ci +
+                                                                    "0" +
+                                                                    index
+                                                                }
+                                                                name="qty"
+                                                                className=""
+                                                            >
+                                                                {food.orderQty}
+                                                            </td>
+                                                            <td
+                                                                key={
+                                                                    "subtot" +
+                                                                    ci +
+                                                                    +index
+                                                                }
+                                                                id={
+                                                                    "subtot" +
+                                                                    ci +
+                                                                    "0" +
+                                                                    index
+                                                                }
+                                                                name="subTotal"
+                                                                className=""
+                                                            >
+                                                                {Math.round(
+                                                                    food.subTotal *
+                                                                        100
+                                                                ) / 100}
+                                                            </td>
+                                                            <td>
+                                                                <button
+                                                                    key={
+                                                                        "btn" +
+                                                                        ci +
+                                                                        +index
                                                                     }
-                                                                </span>
-                                                            ) : null}
-                                                        </td>
-                                                        <td
-                                                            key={
-                                                                "price" +
-                                                                ci +
-                                                                "" +
-                                                                index
-                                                            }
-                                                            id={
-                                                                "price" +
-                                                                ci +
-                                                                "0" +
-                                                                index
-                                                            }
-                                                            name="price"
-                                                            className=""
-                                                        >
-                                                            {food.price}
-                                                        </td>
-                                                        <td
-                                                            key={
-                                                                "note" +
-                                                                ci +
-                                                                "" +
-                                                                index
-                                                            }
-                                                            id={
-                                                                "note" +
-                                                                ci +
-                                                                "0" +
-                                                                index
-                                                            }
-                                                            name="note"
-                                                            className=""
-                                                        >
-                                                            {food.note}
-                                                        </td>
-                                                        <td
-                                                            key={
-                                                                "qty" +
-                                                                ci +
-                                                                "" +
-                                                                index
-                                                            }
-                                                            id={
-                                                                "qty" +
-                                                                ci +
-                                                                "0" +
-                                                                index
-                                                            }
-                                                            name="qty"
-                                                            className=""
-                                                        >
-                                                            {food.orderQty}
-                                                        </td>
-                                                        <td
-                                                            key={
-                                                                "subtot" +
-                                                                ci +
-                                                                +index
-                                                            }
-                                                            id={
-                                                                "subtot" +
-                                                                ci +
-                                                                "0" +
-                                                                index
-                                                            }
-                                                            name="subTotal"
-                                                            className=""
-                                                        >
-                                                            {Math.round(
-                                                                food.subTotal *
-                                                                    100
-                                                            ) / 100}
-                                                        </td>
-                                                        <td>
-                                                            <button
-                                                                key={
-                                                                    "btn" +
-                                                                    ci +
-                                                                    +index
-                                                                }
-                                                                id={
-                                                                    "btn" +
-                                                                    ci +
-                                                                    "0" +
-                                                                    index
-                                                                }
-                                                                name="order"
-                                                                className=" btn btn-primary"
-                                                                onClick={e =>
-                                                                    this.props.handleOrder(
-                                                                        e,
-
+                                                                    id={
+                                                                        "btn" +
+                                                                        ci +
+                                                                        "0" +
                                                                         index
-                                                                    )
-                                                                }
-                                                                style={styleBtn}
-                                                                disabled={
-                                                                    modalOpen |
-                                                                    (food.orderQty >
-                                                                        0) |
-                                                                    (food.orderQty >
-                                                                        49)
-                                                                }
-                                                            >
-                                                                order
-                                                            </button>
+                                                                    }
+                                                                    name="order"
+                                                                    className=" btn btn-primary"
+                                                                    onClick={e =>
+                                                                        this.props.handleOrder(
+                                                                            e,
 
-                                                            {/* <button
-                                                                onClick={() =>
-                                                                    this.handleOpenMadal(
-                                                                        index
-                                                                    )
-                                                                }
-                                                            >
-                                                                open modal
-                                                                {index}
-                                                            </button> */}
+                                                                            index
+                                                                        )
+                                                                    }
+                                                                    style={
+                                                                        styleBtn
+                                                                    }
+                                                                    disabled={
+                                                                        modalOpen |
+                                                                        (food.orderQty >
+                                                                            0) |
+                                                                        (food.orderQty >
+                                                                            49)
+                                                                    }
+                                                                >
+                                                                    order
+                                                                </button>
 
-                                                            <button
-                                                                key={
-                                                                    "addbtn" +
-                                                                    ci +
-                                                                    +index
-                                                                }
-                                                                id={
-                                                                    "addbtn" +
-                                                                    ci +
-                                                                    "0" +
-                                                                    index
-                                                                }
-                                                                name="addorder"
-                                                                className="ml-2 "
-                                                                onClick={e =>
-                                                                    this.props.handleAdd(
-                                                                        e,
+                                                                <button
+                                                                    key={
+                                                                        "addbtn" +
+                                                                        ci +
+                                                                        +index
+                                                                    }
+                                                                    id={
+                                                                        "addbtn" +
+                                                                        ci +
+                                                                        "0" +
                                                                         index
-                                                                    )
-                                                                }
-                                                                disabled={
-                                                                    modalOpen |
-                                                                    (food.orderQty <
-                                                                        1) |
-                                                                    (food.orderQty >
-                                                                        50)
-                                                                }
-                                                            >
-                                                                +
-                                                            </button>
-                                                            <button
-                                                                className="ml-2 text-danger"
-                                                                onClick={e =>
-                                                                    this.props.handleDelete(
-                                                                        e,
-                                                                        index
-                                                                    )
-                                                                }
-                                                                disabled={
-                                                                    modalOpen |
-                                                                    (food.orderQty ==
-                                                                        0)
-                                                                }
-                                                            >
-                                                                X
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                );
-                                            }
-                                        })}
-                                    </Fragment>
-                                );
-                            })}
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td></td>
-                                <td>Total:</td>
-                                <td></td>
-                                <td></td>
+                                                                    }
+                                                                    name="addorder"
+                                                                    className="ml-2 "
+                                                                    onClick={e =>
+                                                                        this.props.handleAdd(
+                                                                            e,
+                                                                            index
+                                                                        )
+                                                                    }
+                                                                    disabled={
+                                                                        modalOpen |
+                                                                        (food.orderQty <
+                                                                            1) |
+                                                                        (food.orderQty >
+                                                                            50)
+                                                                    }
+                                                                >
+                                                                    +
+                                                                </button>
+                                                                <button
+                                                                    className="ml-2 text-danger"
+                                                                    onClick={e =>
+                                                                        this.props.handleDelete(
+                                                                            e,
+                                                                            index
+                                                                        )
+                                                                    }
+                                                                    disabled={
+                                                                        modalOpen |
+                                                                        (food.orderQty ==
+                                                                            0)
+                                                                    }
+                                                                >
+                                                                    X
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    );
+                                                }
+                                            })}
+                                        </Fragment>
+                                    );
+                                })}
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td></td>
+                                    <td>Total:</td>
+                                    <td></td>
+                                    <td></td>
 
-                                <td></td>
-                                <td>
-                                    {this.props.getTotal()
-                                        ? this.props.getTotal().toFixed(2)
-                                        : null}
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
+                                    <td></td>
+                                    <td>
+                                        {this.props.getTotal()
+                                            ? this.props.getTotal().toFixed(2)
+                                            : null}
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </form>
                     <div>
                         {/* <label>
                             <input

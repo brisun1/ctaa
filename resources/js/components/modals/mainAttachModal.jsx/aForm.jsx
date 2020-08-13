@@ -1,15 +1,9 @@
-import React, { Component, useState } from "react";
-import "../../../css/style.css";
-import "./index.css";
-export default function Modal(props) {
-    const [modalChecked, setModalChecked] = useState("");
-    const handleModalRadio = e => {
-        //console.log("target value" + e.target.value);
-        setModalChecked(e.target.value);
-    };
+import React from "react";
+
+export const AForm = ({ onSubmit, custPhone }) => {
     return (
-        <div className="rmodal ">
-            <div className="fixed">
+        <form onSubmit={onSubmit}>
+            <div className="form-group">
                 <p className="rmodal_header ml-2 mt-2">
                     Please choose one of the fllowings with the main food:
                 </p>
@@ -60,10 +54,11 @@ export default function Modal(props) {
                     </label>
                 </div>
                 <br />
-                <div className="justify-content-center mb-2 row">
+                <div className="form-group justify-content-center mb-2 row">
                     <button
                         onClick={props.closeModal}
-                        className="btn btn-secondary"
+                        className="form-control btn btn--secondary"
+                        type="submit"
                     >
                         Choose none
                     </button>
@@ -71,12 +66,14 @@ export default function Modal(props) {
                         onClick={() =>
                             props.confirmSelect(modalChecked, props.i)
                         }
-                        className="btn btn-warning ml-3"
+                        className="form-control btn btn-primary ml-3"
+                        type="submit"
                     >
                         Confirm
                     </button>
                 </div>
             </div>
-        </div>
+        </form>
     );
-}
+};
+export default AForm;

@@ -51,7 +51,6 @@ class MenuOrder extends Component {
                 custAddr: "",
                 custPhone: "",
                 orderMobile: "",
-                orderMsg: "",
                 addrError: "",
                 cardPay: true,
                 total: null,
@@ -248,6 +247,66 @@ class MenuOrder extends Component {
                 })
             );
     }
+    handleSubmit = event => {
+        event.preventDefault();
+
+        //console.log("srefpppppp" + JSON.stringify(this.props));
+
+        // const { fid, fname, price, note, cat } = this.state.inpVal;
+        // const data = {
+        //     cat: cat,
+        //     isMain: this.state.isMains,
+        //     fid: fid.val,
+        //     fname: fname.val,
+        //     price: price.val,
+        //     catNum: fname.catNum,
+        //     note: note.val,
+        //     frice: this.state.frice
+        // };
+        const data = this.props.custData;
+        data.sum = this.state.sum;
+        //const { shop } = this.props;
+        //const tblString=this.props.custData.orderTblString;
+
+        axios
+
+            //.post("api/menu/store/?shop_id=" + this.props.shopId, data, {})
+            .post(
+                "api/order/store/" + this.props.custData.orderTblString,
+                data,
+                { baseURL: "/" }
+            )
+
+            .then(res => {
+                // then print response status
+                console.log("check responnn" + res.data);
+                if (res.data == "order success") {
+                    console.log(res.statusText);
+                    const { cardPay } = this.props.custData;
+
+                    if (cardPay) {
+                        this.props.handleNextStep();
+                    } else {
+                        let c = [...this.state.continueClicked];
+                        c.push(new Date());
+                        this.setState({ continueClicked: c });
+                        if (c.length > 5) {
+                            const p = c.slice(-6);
+                            if (p[5] - p[0] / 6000 < 15) {
+                                alert(
+                                    "you have clicked 'Continue' button too many times, please wait for a while!"
+                                );
+                            }
+                        } else {
+                            this.props.handleCashConfirm();
+
+                            this.setState({ modalOpen: true });
+                            this.showModal(event);
+                        }
+                    }
+                }
+            });
+    };
     handleSubmitFoodForm = () => {
         const checkMenu = [];
         this.state.menu.forEach(el => {
@@ -266,11 +325,10 @@ class MenuOrder extends Component {
                 // console.log("food submit" + JSON.stringify(checkMenu));
                 // console.log("food submit" + JSON.stringify(res));
                 if (res.data === "storeFood success") {
-                    this.setState({
-                        custData: { ...this.state.custData, foodSubmited: true }
-                    });
+                    const custData = { ...this.state.custData };
+                    custData.foodSubmited = true;
+                    this.setState({ custData });
                     this.handleNextStep();
-                    //this.props.handleNextStep();
                 }
             });
     };
@@ -386,14 +444,6 @@ class MenuOrder extends Component {
             }
         });
     };
-    handleOrderMsg = e => {
-        this.setState({
-            custData: {
-                ...this.state.custData,
-                orderMsg: e.target.value
-            }
-        });
-    };
     handleCashConfirm = () => {
         this.setState({
             custData: {
@@ -462,7 +512,6 @@ class MenuOrder extends Component {
                             handleDeliCheck={this.handleDeliCheck}
                             getDeliPrice={this.getDeliPrice}
                             handlePayMethod={this.handlePayMethod}
-                            handleOrderMsg={this.handleOrderMsg}
                             handleCashConfirm={this.handleCashConfirm}
                             // cardPay={this.state.cardPay}
                             custData={this.state.custData}
@@ -470,7 +519,6 @@ class MenuOrder extends Component {
                         />
                     </div>
                 )}
-
                 {step === 3 &&
                     (custData.cardPay ? (
                         <div>

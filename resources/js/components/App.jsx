@@ -34,7 +34,7 @@ class App extends Component {
                     <Route exact path="/orderMenu/:id">
                         <MenuOrder shops={this.state.shops} />
                     </Route>
-                    <Route path="/">
+                    <Route exact path="/">
                         <Shops data={this.state} />
                     </Route>
                 </Switch>
