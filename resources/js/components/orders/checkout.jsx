@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 
 import "../../../css/style.css";
 import "../modals/orderPh/index.css";
-import Modal from "../modals/orderPh/modal";
+import PhModal from "../modals/orderPh/phModal";
 //import { Container } from "../modals/orderPh/Container";
 //import OrderPhModal from "../modals/orderPh/orderPhModal";
 class Checkout extends Component {
@@ -19,7 +19,7 @@ class Checkout extends Component {
             shop: this.props.shop,
             menu: this.props.menu,
             sum: sum,
-            modalOpen: false,
+            phModalOpen: false,
             phonePwd: null
             // delivery: [],
             // deliPrice: "",
@@ -43,58 +43,77 @@ class Checkout extends Component {
         } else {
             this.props.handleCashConfirm();
 
-            this.setState({ modalOpen: true });
+            this.setState({ phModalOpen: true });
             this.showModal(event);
         }
     };
 
     handleSubmit = event => {
         event.preventDefault();
+        const { cardPay, btnClicked } = this.props.custData;
+        if (cardPay == false) {
+            this.props.handleBtnClicked();
+        }
+        let bool = false;
+        const c = this.props.custData.btnClicked;
+        if (btnClicked.length > 5) {
+            let b = btnClicked.slice(-6);
+            let miniutes = (b[5] - b[0]) / 6000;
+            if (!cardPay && miniutes < 15) {
+                bool = true;
+            }
+        }
 
-        //console.log("srefpppppp" + JSON.stringify(this.props));
+        if (bool) {
+            alert(
+                "You have clicked 'Continue' too many time, please try again after a while."
+            );
+        } else {
+            //console.log("srefpppppp" + JSON.stringify(this.props));
 
-        // const { fid, fname, price, note, cat } = this.state.inpVal;
-        // const data = {
-        //     cat: cat,
-        //     isMain: this.state.isMains,
-        //     fid: fid.val,
-        //     fname: fname.val,
-        //     price: price.val,
-        //     catNum: fname.catNum,
-        //     note: note.val,
-        //     frice: this.state.frice
-        // };
-        const data = this.props.custData;
-        data.sum = this.state.sum;
-        //const { shop } = this.props;
-        //const tblString=this.props.custData.orderTblString;
+            // const { fid, fname, price, note, cat } = this.state.inpVal;
+            // const data = {
+            //     cat: cat,
+            //     isMain: this.state.isMains,
+            //     fid: fid.val,
+            //     fname: fname.val,
+            //     price: price.val,
+            //     catNum: fname.catNum,
+            //     note: note.val,
+            //     frice: this.state.frice
+            // };
+            const data = this.props.custData;
+            data.sum = this.state.sum;
+            //const { shop } = this.props;
+            //const tblString=this.props.custData.orderTblString;
 
-        axios
+            axios
 
-            //.post("api/menu/store/?shop_id=" + this.props.shopId, data, {})
-            .post(
-                "api/order/store/" + this.props.custData.orderTblString,
-                data,
-                { baseURL: "/" }
-            )
+                //.post("api/menu/store/?shop_id=" + this.props.shopId, data, {})
+                .post(
+                    "api/order/store/" + this.props.custData.orderTblString,
+                    data,
+                    { baseURL: "/" }
+                )
 
-            .then(res => {
-                // then print response status
-                console.log("check responnn" + res.data);
-                if (res.data == "order success") {
-                    console.log(res.statusText);
-                    const { cardPay } = this.props.custData;
+                .then(res => {
+                    // then print response status
+                    console.log("check responnn" + res.data);
+                    if (res.data == "order success") {
+                        console.log(res.statusText);
+                        const { cardPay } = this.props.custData;
 
-                    if (cardPay) {
-                        this.props.handleNextStep();
-                    } else {
-                        this.props.handleCashConfirm();
+                        if (cardPay) {
+                            this.props.handleNextStep();
+                        } else {
+                            this.props.handleCashConfirm();
 
-                        this.setState({ modalOpen: true });
-                        this.showModal(event);
+                            this.setState({ phModalOpen: true });
+                            this.showModal(event);
+                        }
                     }
-                }
-            });
+                });
+        }
     };
     handlePhonePwdChange = e => {
         this.setState({ phonePwd: e.target.value });
@@ -146,36 +165,37 @@ class Checkout extends Component {
         data.orderMobile = orderMobile;
         data.orderPwd = rand;
         data.pwdTimeStamp = new Date();
-        this.custUpdate(data);
+        this.props.custUpdate(data);
         this.setState({ cashConfirmed: true });
+        //there is event
         this.closeModal(event);
         this.props.handleNextStep();
     };
-    custUpdate = data => {
-        event.preventDefault();
-        axios
-            .post(
-                "api/order/update/" + this.props.custData.orderTblString,
-                data,
-                {
-                    baseURL: "/",
-                    params: {
-                        _method: "PUT"
-                    }
-                }
-            )
+    // custUpdate = data => {
+    //     event.preventDefault();
+    //     axios
+    //         .post(
+    //             "api/order/update/" + this.props.custData.orderTblString,
+    //             data,
+    //             {
+    //                 baseURL: "/",
+    //                 params: {
+    //                     _method: "PUT"
+    //                 }
+    //             }
+    //         )
 
-            .then(res => {
-                // then print response status
-                console.log("update responnn" + res.data);
-                if (res.data == "order update success") {
-                    console.log(res.statusText);
-                }
-            });
-    };
+    //         .then(res => {
+    //             // then print response status
+    //             console.log("update responnn" + res.data);
+    //             if (res.data == "order update success") {
+    //                 console.log(res.statusText);
+    //             }
+    //         });
+    // };
     showModal = () => {
         this.setState(
-            { modalOpen: true }
+            { phModalOpen: true }
             //     , () => {
             //     this.closeButton.focus();
             // }
@@ -183,19 +203,19 @@ class Checkout extends Component {
         this.toggleScrollLock();
     };
     closeModal = event => {
-        event.preventDefault(event);
-        this.setState({ modalOpen: false });
+        event.preventDefault();
+        this.setState({ phModalOpen: false });
         // this.TriggerButton.focus();
         this.toggleScrollLock();
     };
     onKeyDown = event => {
         if (event.keyCode === 27) {
-            this.closeModal();
+            this.closeModal(event);
         }
     };
     onClickOutside = event => {
         if (this.modal && this.modal.contains(event.target)) return;
-        this.closeModal();
+        this.closeModal(event);
     };
 
     toggleScrollLock = () => {
@@ -204,13 +224,14 @@ class Checkout extends Component {
     // componentDidMount() {}
     // getModalClass = () => {
     //     let classes = "modal";
-    //     if (this.state.modalOpen) {
+    //     if (this.state.phModalOpen) {
     //         classes += "d-block";
     //     }
     //     return classes;
     // };
     render() {
         console.log("menu render state" + this.state.menu);
+
         const { menu } = this.state;
         const { custData } = this.props;
         const { deliPrice } = custData;
@@ -233,8 +254,8 @@ class Checkout extends Component {
                     <hr />
                     <label>The food you have ordered is as below:</label>
                     <button onClick={this.showModal}>show Modal</button>
-                    {this.state.modalOpen ? (
-                        <Modal
+                    {this.state.phModalOpen ? (
+                        <PhModal
                             submitOrderPh={this.submitOrderPh}
                             modalRef={n => (this.modal = n)}
                             buttonRef={n => (this.closeButton = n)}
@@ -270,7 +291,7 @@ class Checkout extends Component {
                     <GetDist
                         addresses={[this.state.shop.addr, this.state.custAddr]}
                     /> */}
-                    {/* {this.state.modalOpen ? (
+                    {/* {this.state.phModalOpen ? (
                         <div>
                             <Modal
                                 //modalChecked={this.state.modalChecked}
@@ -280,7 +301,7 @@ class Checkout extends Component {
                                 confirmSelect={modalChecked =>
                                     this.handleConfirmSelect(
                                         modalChecked,
-                                        this.state.modalOpen
+                                        this.state.phModalOpen
                                     )
                                 }
                             />
@@ -319,7 +340,11 @@ class Checkout extends Component {
 
                                         {this.state.menu.map((food, index) => {
                                             //where catnum==1
-
+                                            const s =
+                                                Math.round(
+                                                    food.subTotal * 100
+                                                ) / 100;
+                                            let subTotal = s.toFixed(2);
                                             if (food.catNum === ci) {
                                                 return (
                                                     <tr
@@ -449,10 +474,7 @@ class Checkout extends Component {
                                                             name="subTotal"
                                                             className=""
                                                         >
-                                                            {Math.round(
-                                                                food.subTotal *
-                                                                    100
-                                                            ) / 100}
+                                                            {subTotal}
                                                         </td>
                                                     </tr>
                                                 );
@@ -469,13 +491,13 @@ class Checkout extends Component {
                                 <td></td>
                                 <td></td>
 
-                                <td>{this.state.sum}</td>
                                 <td></td>
+                                <td>{this.state.sum.toFixed(2)}</td>
                             </tr>
                         </tfoot>
                     </table>
                     <form onSubmit={this.handleSubmit}>
-                        <label className="text-danger">
+                        <label className="text-danger font-weight-bold">
                             Please provide the following infomation to proceed.
                         </label>
                         <br />
@@ -507,19 +529,6 @@ class Checkout extends Component {
                         </label>
 
                         <br />
-                        {deliPrice == "max"
-                            ? custData.isDeli && (
-                                  <div className="text-warning float-right">
-                                      The delivery address might be too far to
-                                      serve. Please contact the shop.
-                                  </div>
-                              )
-                            : custData.isDeli &&
-                              deliPrice > 0 && (
-                                  <div className="float-right">
-                                      Delivery Price: {deliPrice}
-                                  </div>
-                              )}
 
                         <label>
                             Your contact number:
@@ -539,6 +548,7 @@ class Checkout extends Component {
                                     <input
                                         type="text"
                                         className="ml-2"
+                                        size={38}
                                         value={custData.custAddr}
                                         onChange={this.props.handleCustAddr}
                                     />
@@ -547,8 +557,21 @@ class Checkout extends Component {
                         ) : (
                             <div> {""}</div>
                         )}
+                        {deliPrice == "max"
+                            ? custData.isDeli && (
+                                  <div className="text-warning float-right">
+                                      The delivery address might be too far to
+                                      serve. Please contact the shop.
+                                  </div>
+                              )
+                            : custData.isDeli &&
+                              deliPrice > 0 && (
+                                  <div className="">
+                                      Delivery Price: {deliPrice}
+                                  </div>
+                              )}
                         {custData.isDeli && custData.addrError == "NOT_FOUND" && (
-                            <div className="text-danger float-right">
+                            <div className="text-danger font-weight-light font-italic">
                                 <div>
                                     We didn't find your address on google map .
                                     Make sure the food is deliverable !
@@ -557,17 +580,16 @@ class Checkout extends Component {
                             </div>
                         )}
                         <br />
-                        <br />
 
                         <div className="d-flex ">
-                            <div>Total to pay</div>
+                            <div>Total to pay:</div>
 
-                            <div className="ml-auto">
-                                {this.props.getTotal().toFixed(2)}
+                            <div className="ml-3">
+                                {this.props.getTotal().toFixed(2)}Eur
                             </div>
                         </div>
                         <br />
-                        <br />
+
                         <label>
                             Card pay
                             <input
@@ -594,8 +616,7 @@ class Checkout extends Component {
                         </label>
                         <br />
                         <label htmlFor="orderMsg" className="formGroup">
-                            In case you want to leave a message to the shop for
-                            your order, please type here.
+                            Message to the shop( optional ):
                             <br />
                             <textarea
                                 rows="3"

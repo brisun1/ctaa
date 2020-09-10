@@ -75,6 +75,9 @@ export default function CheckoutForm(props) {
                 // post-payment actions.
                 console.log("paid resultttt" + result);
                 props.handleSubmitFoodForm();
+                //update paid amt
+                let data = { paidAmt: props.total };
+                props.custUpdate(data);
                 //props.handleNextStep();
             }
         }

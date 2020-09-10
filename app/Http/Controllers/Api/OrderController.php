@@ -5,10 +5,13 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Resources\OrderCollection;
+use App\Http\Resources\OrderMenuCollection;
 use App\Shop;
 use App\User;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Schema;
+
 use App\Order;
 use App\OrderMenu;
 use App\CreateTbl;
@@ -61,7 +64,7 @@ class OrderController extends Controller
                 $attach='';
                 foreach($food['mainAttach'] as $mainAttach){
                     if(isset($mainAttach)){
-                        $attach=$attach.$mainAttach;
+                        $attach=$attach.' '.$mainAttach;
                     }
                 }
                 $orderFood->main_attach=$attach;
@@ -120,7 +123,8 @@ class OrderController extends Controller
     //    if($request->has('fname')){        
     //     $cat=$request->cat;
     $order=new Order();
-    //$order->shop_id=$request->shop_id;
+    $s=explode('_',$tbl_string,2);
+    $order->shop_id=$s[0];
     $deliPrice=$request->deliPrice;
      if($deliPrice=="max"){$deliPrice=5;}
     $order->paidAmt=0;
@@ -134,7 +138,7 @@ class OrderController extends Controller
      $order->cardPay=$request->cardPay;
      $order->order_msg=$request->orderMsg;
      $order->deliPrice=$deliPrice;
-     $order->delivery=$request->isDeli;
+     $order->isDeli=$request->isDeli;
      //$order->orderRef=$request->orderRef;
      $tblName="order_".$tbl_string;
      $order->orderFoodTbl=$tblName;
@@ -170,7 +174,7 @@ class OrderController extends Controller
     {
 
         //$shops=User::find(Auth::id())->shops;   
-        $shops=User::find(2)->shops;
+        $shops=User::find(15)->shops;
         
         foreach($shops as $shop){
             $data= Shop::find($shop->id)->orders;
@@ -188,6 +192,35 @@ class OrderController extends Controller
         return new OrderCollection($orders);}
         else return ;
 //return response()->json($orders);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function custShow($tbl_string)
+    {
+        $food=new OrderMenu();
+        $tbl_name="order_".$tbl_string;
+        $food->setTable($tbl_name);
+        if (Schema::hasTable($tbl_name))
+        
+          $data['food']= new OrderMenuCollection($food->get());
+       
+
+        $tblName="order_".$tbl_string;
+           
+        $order= Order::where('orderFoodTbl',$tblName)->get();
+            
+        $data['order']=new OrderCollection($order);
+                if(!empty($order) && !empty($data['food'])){
+                    return $data;
+                    
+                }else return ;
+            
+      
     }
 
     /**
@@ -221,10 +254,15 @@ class OrderController extends Controller
     //  $order->deliAddr=$request->custAddr;
     //  $order->contactPhone=$request->custPhone;
     if($request->has("orderMobile")){
-    $order->order_mobl=$request->orderMobile;}
+        $order->order_mobl=$request->orderMobile;
+    }
     if($request->has("orderPwd")){
         $order->order_pwd=$request->orderPwd;
-        $order->pwd_created = \Carbon::now();}
+        $order->pwd_created = \Carbon::now();
+    }
+    if($request->has("paidAmt")){
+        $order->paidAmt=$request->paidAmt;
+    }
     //  $order->email="";
     //  $order->cardPay=$request->cardPay;
      

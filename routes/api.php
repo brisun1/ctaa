@@ -32,6 +32,7 @@ Route::get('order/show','Api\OrderController@show');
 Route::post('order/store/{str_tbl}','Api\OrderController@store');
 Route::post('order/storeFood/{str_tbl}','Api\OrderController@storeFood');
 Route::put('order/update/{str_tbl}','Api\OrderController@update');
+Route::get('order/custShow/{str_tbl}','Api\OrderController@custShow');
 Route::post('order/matchPwd/{str_tbl}','Api\OrderController@matchPwd');
 Route::post('delivery/store/{str_tbl}','Api\DeliveryController@store')->middleware('auth:api');
 Route::get('delivery/show/{shop_id}','Api\DeliveryController@show');

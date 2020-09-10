@@ -57,7 +57,8 @@ class MenuOrder extends Component {
                 total: null,
                 orderTblString: orderTblString,
                 cashConfirm: false,
-                foodSubmited: false
+                foodSubmited: false,
+                btnClicked: []
             }
         };
     }
@@ -77,7 +78,8 @@ class MenuOrder extends Component {
         menu[i].subTotal = parseFloat(menu[i].price);
         this.setState({ menu });
         if (menu[i].isMain) {
-            this.setState({ modalOpen: i + 1 });
+            this.showModal(i);
+            //this.setState({ modalOpen: i + 1 });
         }
     };
     handleAdd = (e, i) => {
@@ -87,7 +89,7 @@ class MenuOrder extends Component {
         menu[i].subTotal = menu[i].subTotal + parseFloat(menu[i].price);
         this.setState({ menu });
         if (menu[i].isMain) {
-            this.setState({ modalOpen: i + 1 });
+            this.showModal(i);
         }
     };
     handleDelete = (e, i) => {
@@ -125,8 +127,25 @@ class MenuOrder extends Component {
     // handleCustAddr = e => {
     //     this.setState({ custAddr: e.target.value });
     // };
-    handleCloseModal = () => {
+    // handleCloseModal = () => {
+    //     this.setState({ modalOpen: false });
+    // };
+    showModal = i => {
+        this.setState({ modalOpen: i + 1 });
+        //     , () => {
+        //     this.closeButton.focus();
+        // }
+
+        this.toggleScrollLock();
+    };
+    closeModal = event => {
+        event.preventDefault();
         this.setState({ modalOpen: false });
+        // this.TriggerButton.focus();
+        this.toggleScrollLock();
+    };
+    toggleScrollLock = () => {
+        document.querySelector("html").classList.toggle("scroll-lock");
     };
     handleConfirmSelect = (modalChecked, i) => {
         this.setState({ modalChecked });
@@ -198,10 +217,16 @@ class MenuOrder extends Component {
 
         this.setState({ menu });
         if (modalChecked) {
-            this.setState({ modalOpen: false });
+            this.closeModal(event);
         }
     };
-
+    handleBtnClicked = () => {
+        let d = new Date();
+        let t = d.getTime();
+        let btnClicked = [...this.state.custData.btnClicked];
+        btnClicked.push(t);
+        this.setState({ custData: { ...this.state.custData, btnClicked } });
+    };
     componentDidMount() {
         const { shop } = this.state;
         let str_tbl = shop.shopName + shop.area + shop.id;
@@ -249,6 +274,7 @@ class MenuOrder extends Component {
             );
     }
     handleSubmitFoodForm = () => {
+        event.preventDefault();
         const checkMenu = [];
         this.state.menu.forEach(el => {
             if (el.orderQty > 0) {
@@ -394,6 +420,28 @@ class MenuOrder extends Component {
             }
         });
     };
+    custUpdate = data => {
+        event.preventDefault();
+        axios
+            .post(
+                "api/order/update/" + this.state.custData.orderTblString,
+                data,
+                {
+                    baseURL: "/",
+                    params: {
+                        _method: "PUT"
+                    }
+                }
+            )
+
+            .then(res => {
+                // then print response status
+                console.log("update responnn" + res.data);
+                if (res.data == "order update success") {
+                    console.log(res.statusText);
+                }
+            });
+    };
     handleCashConfirm = () => {
         this.setState({
             custData: {
@@ -421,13 +469,18 @@ class MenuOrder extends Component {
                                 //shop={this.state.shop}
                                 menu={menu}
                                 cats={this.state.cats}
-                                firce={this.state.frice}
+                                frice={this.state.frice}
                                 modalOpen={this.state.modalOpen}
                                 modalChecked={this.state.modalChecked}
                                 handleOrder={this.handleOrder}
                                 handleAdd={this.handleAdd}
                                 handleDelete={this.handleDelete}
-                                handleCloseModal={this.handleCloseModal}
+                                //     //
+                                //     closeModal={this.closeModal}
+                                // onKeyDown={this.onKeyDown}
+                                // onClickOutside={this.onClickOutside}
+                                //handleCloseModal={this.handleCloseModal}
+                                closeModal={this.closeModal}
                                 handleConfirmSelect={modalChecked =>
                                     this.handleConfirmSelect(
                                         modalChecked,
@@ -466,7 +519,9 @@ class MenuOrder extends Component {
                             handleCashConfirm={this.handleCashConfirm}
                             // cardPay={this.state.cardPay}
                             custData={this.state.custData}
+                            custUpdate={this.custUpdate}
                             handleSubmitFoodForm={this.handleSubmitFoodForm}
+                            handleBtnClicked={this.handleBtnClicked}
                         />
                     </div>
                 )}
@@ -479,6 +534,7 @@ class MenuOrder extends Component {
                             <Card
                                 handleNextStep={this.handleNextStep}
                                 handlePrevStep={this.handlePrevStep}
+                                custUpdate={this.custUpdate}
                                 handleSubmitFoodForm={this.handleSubmitFoodForm}
                                 shopName={shop.shopName + "" + shop.area}
                                 // menu={checkMenu}
@@ -503,12 +559,18 @@ class MenuOrder extends Component {
                         </div>
                     ) : (
                         <CashOrderConfirm
-                            handleNextStep={this.handleNextStep}
+                            handlePrevStep={this.handlePrevStep}
                             handleSubmitFoodForm={this.handleSubmitFoodForm}
                             custData={custData}
+                            getTotal={this.getTotal}
                         />
                     ))}
-                {step === 4 && <OrderSuccess />}
+                {step === 4 && (
+                    <OrderSuccess
+                        orderTblString={this.state.custData.orderTblString}
+                        shop={shop}
+                    />
+                )}
             </div>
         );
     }

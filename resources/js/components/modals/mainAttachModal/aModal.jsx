@@ -1,16 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Form } from "./form";
+import { AForm } from "./aForm";
 import FocusTrap from "focus-trap-react";
-export const Modal = ({
-    onClickOutside,
-    onKeyDown,
-    modalRef,
-    buttonRef,
-    closeModal,
-    submitOrderPh,
-    custPhone
-}) => {
+export function AModal(props) {
+    const {
+        onClickOutside,
+        onKeyDown,
+        modalRef,
+        buttonRef,
+        closeModal,
+        //submitOrderPh,
+        confirmSelect,
+        i,
+        frPrice
+        //custPhone
+    } = props;
     return ReactDOM.createPortal(
         <FocusTrap>
             <aside
@@ -38,13 +42,18 @@ export const Modal = ({
                         </svg>
                     </button>
                     <div className="modal-body">
-                        <Form onSubmit={submitOrderPh} custPhone={custPhone} />
+                        <AForm
+                            confirmSelect={confirmSelect}
+                            frPrice={frPrice}
+                            closeModal={closeModal}
+                            i={i}
+                        />
                     </div>
                 </div>
             </aside>
         </FocusTrap>,
         document.body
     );
-};
+}
 
-export default Modal;
+export default AModal;

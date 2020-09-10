@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CustomerDetail from "./customerDetail";
 class CashOrderConfirm extends Component {
     constructor(props) {
         super(props);
@@ -33,7 +34,7 @@ class CashOrderConfirm extends Component {
     };
 
     render() {
-        // const { custData } = this.props;
+        const { custData } = this.props;
         // if (custData.cashConfirm)
         return (
             <>
@@ -43,26 +44,31 @@ class CashOrderConfirm extends Component {
                 >
                     {"< "}Back
                 </button>
-                <h6 className="text-center">Order Confirmation</h6>
+                <h5 className="text-center">Order Confirmation</h5>
                 <hr />
                 <form onSubmit={this.handleSubmitPwd}>
-                    <label htmlFor="pwd" className="text-primary">
-                        Confirm Code
+                    <label htmlFor="pwd" className="">
+                        Confirmation Code:
                     </label>
                     <input
-                        className="form-control"
+                        className="ml-1"
                         id="pwd"
+                        size={12}
                         onChange={this.handlePhonePwdChange}
                     />
                     <button
                         type="submit"
                         //onClick={this.handleSubmitPwd}
-                        className="btn btn-primary float-right"
+                        className="btn btn-primary ml-2"
                     >
-                        Enter
+                        Confirm
                     </button>
                 </form>
                 <hr />
+                <CustomerDetail
+                    custData={custData}
+                    getTotal={this.props.getTotal}
+                />
             </>
         );
     }

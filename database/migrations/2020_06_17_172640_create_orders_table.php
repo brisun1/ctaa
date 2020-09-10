@@ -16,7 +16,7 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
            
-            //$table->string('shop_id');
+            $table->string('shop_id');
             $table->unsignedDecimal('paidAmt', 8, 2)->nullable();
             $table->unsignedDecimal('amtToPay', 8, 2)->nullable();
             $table->string('cname',30)->nullable();
@@ -30,7 +30,7 @@ class CreateOrdersTable extends Migration
             $table->boolean('cardPay');
             $table->text('order_msg')->nullable();
             $table->unsignedDecimal('deliPrice', 4, 2)->nullable();
-            $table->boolean('delivery');
+            $table->boolean('isDeli');
             //$table->string('orderRef');
             $table->string('orderFoodTbl');
             $table->boolean('isComplete')->nullable();

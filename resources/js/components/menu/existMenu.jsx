@@ -2,8 +2,10 @@ import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
 //import getDist from "../maps/getDist";
 import { withRouter } from "react-router";
-import Modal from "../others/modal";
+//import Modal from "../others/modal";
 import "../../../css/style.css";
+import AModal from "../modals/mainAttachModal/aModal";
+import "../modals/orderPh/index.css";
 class ExistMenu extends Component {
     constructor(props) {
         super(props);
@@ -12,7 +14,7 @@ class ExistMenu extends Component {
             //shop: this.props.shop,
             menu: this.props.menu,
             cats: this.props.cats,
-
+            modalOpen: false,
             modalChecked: ""
         };
     }
@@ -28,6 +30,35 @@ class ExistMenu extends Component {
             console.log("smsRRRRRR" + JSON.stringify(res));
         });
     };
+    ////
+    // showModal = () => {
+    //     this.setState(
+    //         { modalOpen: true }
+    //         //     , () => {
+    //         //     this.closeButton.focus();
+    //         // }
+    //     );
+    //     this.toggleScrollLock();
+    // };
+    // closeModal = event => {
+    //     event.preventDefault();
+    //     this.setState({ modalOpen: false });
+    //     // this.TriggerButton.focus();
+    //     this.toggleScrollLock();
+    // };
+    onKeyDown = event => {
+        if (event.keyCode === 27) {
+            this.props.closeModal(event);
+        }
+    };
+    onClickOutside = event => {
+        if (this.modal && this.modal.contains(event.target)) return;
+        this.props.closeModal(event);
+    };
+
+    // toggleScrollLock = () => {
+    //     document.querySelector("html").classList.toggle("scroll-lock");
+    // };
     render() {
         const { menu } = this.state;
         const { modalOpen } = this.props;
@@ -59,14 +90,25 @@ class ExistMenu extends Component {
                     /> */}
                     {modalOpen ? (
                         <div>
-                            <Modal
+                            <AModal
                                 //modalChecked={this.state.modalChecked}
-                                frPrice={this.state.frice}
+                                frPrice={this.props.frice}
                                 handleModalRadio={e =>
                                     this.props.handleModalRadio(e)
                                 }
-                                closeModal={this.props.handleCloseModal}
-                                confirmSelect={this.props.handleConfirmSelect}
+                                //closeModal={this.props.handleCloseModal}
+                                modalOpen={this.props.modalOpen}
+                                modalRef={n => (this.modal = n)}
+                                buttonRef={n => (this.closeButton = n)}
+                                closeModal={this.props.closeModal}
+                                onKeyDown={this.onKeyDown}
+                                onClickOutside={this.onClickOutside}
+                                confirmSelect={modalChecked =>
+                                    this.props.handleConfirmSelect(
+                                        modalChecked,
+                                        this.props.modalOpen
+                                    )
+                                }
                             />
                         </div>
                     ) : null}
@@ -249,6 +291,7 @@ class ExistMenu extends Component {
                                                             </td>
                                                             <td>
                                                                 <button
+                                                                    type="button"
                                                                     key={
                                                                         "btn" +
                                                                         ci +
@@ -284,6 +327,7 @@ class ExistMenu extends Component {
                                                                 </button>
 
                                                                 <button
+                                                                    type="button"
                                                                     key={
                                                                         "addbtn" +
                                                                         ci +
@@ -314,6 +358,7 @@ class ExistMenu extends Component {
                                                                     +
                                                                 </button>
                                                                 <button
+                                                                    type="button"
                                                                     className="ml-2 text-danger"
                                                                     onClick={e =>
                                                                         this.props.handleDelete(

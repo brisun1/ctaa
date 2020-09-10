@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import {
     BrowserRouter as Router,
     Switch,
@@ -12,52 +12,47 @@ import ReactDOM from "react-dom";
 import MenuForm from "./menu/menuForm";
 import ClientMenu from "./menu/clientMenu";
 import Order from "./orders/order";
+import FoodDetail from "./orders/foodDetail2";
 
-class ClientApp extends Component {
-    state = {
-        // showOrder: true,
-        order: [],
-        redirect: false
-        // shop: []
-    };
-    componentDidMount() {
-        console.log("from ui DidM");
-        axios.get("api/order/show").then(res => {
-            console.log("from ui DidM" + JSON.stringify(res.data));
-            //const data=res.data;
-            console.log("client APP didm called" + this.state.order.length);
-            const data = res.data;
+const ClientApp = () => {
+    const [order, setOrder] = useState([]);
+    const [redirect, setRedirect] = useState(false);
+
+    useEffect(() => {
+        (async () => {
+            console.log("from ui DidM");
+            let res = await axios.get("api/order/show");
+            // console.log("from ui DidM" + JSON.stringify(res.data));
+
+            //console.log("client APP didm called" + this.state.order.length);
+            const data = await res.data;
             if (data === "") {
-                this.setState({ redirect: true });
+                setRedirect(true);
             } else if (data.data.length > 0) {
-                this.setState({
-                    order: data.data
-                });
+                setOrder(data.data);
             }
-        });
 
-        // axios.get("api/shop/show").then(res => {
-        //     console.log("from ui DidM" + JSON.stringify(res));
-        //     this.setState({
-        //         shop: res.data
-        //     });
-        // });
-    }
+            // axios.get("api/shop/show").then(res => {
+            //     console.log("from ui DidM" + JSON.stringify(res));
+            //     this.setState({
+            //         shop: res.data
+            //     });
+            // });
+        })();
+    }, [data]);
 
-    render() {
-        if (this.state.redirect) return <Redirect to="/clientShops" />;
-        else {
-            return (
-                <div>
-                    <div>loading ...</div>;
-                    <Order data={this.state.order} />
-                </div>
-            );
-        }
+    if (redirect) return <Redirect to="/clientShops" />;
+    else {
+        return (
+            <div>
+                <div>loading ...</div>;
+                <Order orders={order} />
+            </div>
+        );
     }
 
     // return
-}
+};
 
 export default ClientApp;
 // if (document.getElementById("client222")) {

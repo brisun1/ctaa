@@ -35,15 +35,18 @@ export default function Card(props) {
     const stripePromise = loadStripe(
         "pk_test_51GuqPBLx5fJpovNG2twYeFlvOXiLvK9qq8jLsqtRHt6cShmWDjFJB9Q0WsoDkGgSGtLDwVgtSupt7rtQ0yDyxzge00nlKJLCYM"
     );
+    const total = props.getTotal().toFixed(2);
     return (
         <div className="App">
-            <div> Total amount to pay: {props.getTotal().toFixed(2)}Euro</div>
+            <div> Total amount to pay: {total}Euro</div>
             <Elements stripe={stripePromise}>
                 <CheckoutForm
                     paymentIntent={paymentIntent}
                     handleNextStep={props.handleNextStep}
                     handlePrevStep={props.handlePrevStep}
                     handleSubmitFoodForm={props.handleSubmitFoodForm}
+                    total={total}
+                    custUpdate={props.custUpdate}
                 />
             </Elements>
             <hr />
